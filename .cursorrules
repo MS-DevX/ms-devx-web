@@ -1,0 +1,57 @@
+# MS DevX — Cursor AI Rules
+
+## Project identity
+- Brand: MS DevX | Domain: msdevx.com | Tools: tools.marth.systems
+- Tagline: "Build smarter. Ship faster."
+
+## Stack — never deviate
+- Next.js 14+ App Router (never Pages Router)
+- TypeScript strict mode — no `any`, no implicit types
+- Tailwind CSS only — no CSS modules, no styled-components, no inline style objects unless unavoidable
+- shadcn/ui for all UI primitives
+- Lucide React for all icons — never use emoji as icons
+- Framer Motion for animations
+- React Hook Form + Zod for every form
+- next-themes for dark/light mode
+
+## Architecture rules
+- Server Components by default — add "use client" only when needed (forms, animations, hooks)
+- All page data comes from /content/data JSON files or MDX — never hardcode content in components
+- All site config (name, nav, social links, colors) lives in /lib/constants.ts only
+- All TypeScript interfaces live in /lib/types.ts only — never define types inline in components
+- All utility functions live in /lib/utils.ts
+- Components never fetch data — pass data as props from page/layout Server Components
+
+## File & folder naming
+- Components: PascalCase (HeroSection.tsx, NavBar.tsx)
+- Files/folders: kebab-case (hero-section.tsx is wrong — use HeroSection.tsx)
+- Hooks: camelCase starting with "use" (useDebounce.ts)
+- Data files: camelCase (apps.json, toolsList.json)
+
+## Component rules
+- Every component must have a typed Props interface above the function
+- No default exports from /lib files — named exports only
+- Components in /sections are page-section-level, not reusable atoms
+- Components in /shared are reusable across sections and pages
+- Components in /ui are shadcn primitives only — never modify them
+
+## Styling rules
+- Use brand color tokens from tailwind.config.ts: navy, electricBlue, skyBlue, teal, offwhite, ink
+- Dark mode: use dark: Tailwind prefix — CSS variables defined in globals.css
+- Consistent card style: rounded-2xl border border-border p-6 bg-card
+- Focus states required on all interactive elements (focus-visible:ring-2)
+- No hardcoded hex colors in JSX — always use Tailwind classes
+
+## Code quality
+- No console.log in committed code
+- No TODO comments left in generated code — complete every task fully
+- All next/image usages must include width, height, and alt
+- All external links: target="_blank" rel="noopener noreferrer"
+- Loading and error states required for any async operation
+- Every page needs generateMetadata() export
+
+## When modifying existing files
+- Read the full file before editing
+- Preserve all existing imports
+- Never remove code that isn't directly related to the current task
+- Add new components at the bottom of their section, never in the middle
