@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Shahzad Marth",
+      name: "Team MS DevX",
     },
   ],
   openGraph: {
@@ -96,7 +96,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
