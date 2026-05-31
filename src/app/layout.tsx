@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   description:
     "Build smarter. Ship faster. AI tools, SaaS apps, and automation systems.",
   applicationName: siteConfig.name,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
+  },
   keywords: [
     "MS DevX",
     "AI tools",
