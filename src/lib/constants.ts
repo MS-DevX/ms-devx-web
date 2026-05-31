@@ -6,8 +6,10 @@ export const siteConfig = {
   description:
     "MS DevX is an indie AI studio building modern tools, apps, and developer-first solutions.",
   url: "https://msdevx.com",
+  siteUrl: "https://msdevx.com",
   toolsUrl: "https://tools.marth.systems",
   contactEmail: "marthsystems@gmail.com",
+  author: "Shahzad Marth",
   colors: {
     navy: "#0F1B2D",
     electric: "#4A9EFF",

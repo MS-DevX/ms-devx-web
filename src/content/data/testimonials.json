@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Ayesha Khan",
+    "role": "Founder",
+    "company": "LaunchGrid",
+    "avatar": "/avatars/ayesha.jpg",
+    "quote": "MS DevX shipped our MVP faster than any agency we worked with.",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "name": "Omar Ali",
+    "role": "Creator",
+    "company": "StudySphere",
+    "avatar": "/avatars/omar.jpg",
+    "quote": "Their UI quality and AI workflow integration are seriously next level.",
+    "rating": 5
+  },
+  {
+    "id": "3",
+    "name": "Sarah Mitchell",
+    "role": "Product Lead",
+    "company": "NovaStack",
+    "avatar": "/avatars/sarah.jpg",
+    "quote": "From concept to production in weeks — clean code, sharp design, zero drama.",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "name": "Hassan Rahman",
+    "role": "Indie Developer",
+    "company": "DevCraft",
+    "avatar": "/avatars/hassan.jpg",
+    "quote": "The tools and apps they build set a high bar for indie dev studios everywhere.",
+    "rating": 5
+  }
+]

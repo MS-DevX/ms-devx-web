@@ -11,6 +11,7 @@ export interface App {
   playStoreUrl?: string;
   webUrl?: string;
   badge: BadgeType;
+  status?: ToolStatus;
   featured: boolean;
 }
 
@@ -63,6 +64,16 @@ export interface BlogPost {
   content?: string;
 }
 
+export interface BlogCardProps {
+  post: BlogPost;
+}
+
+export interface BlogPostPageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
 export interface NavItem {
   label: string;
   href: string;
@@ -81,4 +92,147 @@ export type ToolCategory =
   | "Student"
   | "PDF"
   | "Utility";
+
+export interface ContactFormValues {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+export interface ContactPageClientProps {
+  className?: string;
+  faqs?: HireFaqItem[];
+}
+
+export interface ContactApiSuccessResponse {
+  success: true;
+  message: string;
+}
+
+export interface ContactApiErrorResponse {
+  success: false;
+  error: string;
+  details?: Record<string, string[] | undefined>;
+}
+
+export type ContactApiResponse =
+  | ContactApiSuccessResponse
+  | ContactApiErrorResponse;
+
+export interface AboutTimelineItem {
+  title: string;
+  description: string;
+}
+
+export interface AboutValue {
+  title: string;
+  description: string;
+}
+
+export interface HirePackage {
+  id: string;
+  name: string;
+  price: string;
+  features: string[];
+  highlighted: boolean;
+}
+
+export interface HireFaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface FreelancePlatform {
+  name: string;
+  description: string;
+  url: string;
+}
+
+export interface ToolsLayoutProps {
+  children: React.ReactNode;
+}
+
+export interface MainLayoutProps {
+  children: React.ReactNode;
+}
+
+export interface ToolLayoutProps {
+  title: string;
+  description: string;
+  status?: ToolStatus;
+  children: React.ReactNode;
+}
+
+export interface ToolPageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+export interface ToolUiProps {
+  className?: string;
+}
+
+export interface ExpenseItem {
+  id: string;
+  title: string;
+  amount: number;
+  category: string;
+}
+
+export interface NutritionResult {
+  calories: number;
+  protein: number;
+  carbs: number;
+  fat: number;
+  label: string;
+}
+
+export interface CategoryFilterProps {
+  categories: string[];
+  active: string;
+  onChange: (category: string) => void;
+}
+
+export interface BackToTopProps {
+  className?: string;
+}
+
+export interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export interface ThemeToggleProps {
+  className?: string;
+}
+
+export interface BlogPageClientProps {
+  posts: BlogPost[];
+}
+
+export interface ToolsHubPageClientProps {
+  tools: Tool[];
+}
+
+export interface PrayerTime {
+  name: string;
+  time: string;
+}
+
+export interface BreadcrumbItem {
+  name: string;
+  path: string;
+}
+
+export interface RelatedLinkItem {
+  href: string;
+  label: string;
+  description?: string;
+}
+
+export interface FaqData {
+  hire: HireFaqItem[];
+  contact: HireFaqItem[];
+}
 

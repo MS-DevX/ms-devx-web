@@ -1,0 +1,38 @@
+{
+  "hire": [
+    {
+      "question": "How long does a project take?",
+      "answer": "Timelines depend on scope. A landing page or basic automation typically ships in 1–2 weeks. A full SaaS MVP usually takes 4–8 weeks. Enterprise projects are scoped individually with clear milestones and delivery dates agreed upfront."
+    },
+    {
+      "question": "Do you build AI products?",
+      "answer": "Yes. AI integration is core to what we do — from OpenAI-powered features and chat interfaces to custom automation pipelines, document processing, and intelligent workflows embedded in SaaS products."
+    },
+    {
+      "question": "Can you improve existing software?",
+      "answer": "Absolutely. We regularly take over existing codebases to refactor architecture, improve performance, add new features, modernize UI, and integrate AI capabilities without disrupting live users."
+    },
+    {
+      "question": "Do you provide maintenance?",
+      "answer": "We offer ongoing maintenance and support packages covering bug fixes, dependency updates, monitoring, and feature iterations. Priority support is included with Growth and Enterprise packages."
+    },
+    {
+      "question": "Can I hire you for consulting?",
+      "answer": "Yes. We provide technical consulting on architecture decisions, AI strategy, tech stack selection, and product scoping. Consulting can be standalone or bundled with a development engagement."
+    }
+  ],
+  "contact": [
+    {
+      "question": "How quickly will MS DevX respond?",
+      "answer": "We typically reply to contact form submissions and emails within 1–2 business days."
+    },
+    {
+      "question": "What types of projects does MS DevX take on?",
+      "answer": "We build AI-powered SaaS products, automation systems, mobile apps, and custom developer tools — from MVPs to ongoing maintenance and consulting."
+    },
+    {
+      "question": "Can I hire MS DevX for a one-off tool or landing page?",
+      "answer": "Yes. We offer starter packages for landing pages and focused builds, as well as larger SaaS and enterprise engagements. See our Hire page for package details."
+    }
+  ]
+}
