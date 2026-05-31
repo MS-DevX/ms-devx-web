@@ -55,6 +55,10 @@ export const metadata: Metadata = {
     description: siteConfig.tagline,
     images: ["/opengraph-image"],
   },
+  manifest: "/manifest.json",
+  other: {
+    "msapplication-TileColor": "#000000",
+  },
   robots: {
     index: true,
     follow: true,
@@ -67,7 +71,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0F1B2D",
+  themeColor: "#000000",
   width: "device-width",
   initialScale: 1,
 };

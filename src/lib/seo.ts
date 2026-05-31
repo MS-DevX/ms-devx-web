@@ -120,6 +120,8 @@ export function buildPageMetadata(input: PageMetadataInput): Metadata {
       card: "summary_large_image",
       title: input.title,
       description: input.description,
+      site: "@msdevx",
+      creator: "@marthsystems",
       images: ogImages.map((image) => image.url),
     },
   };
@@ -134,7 +136,7 @@ export function createOrganizationSchema() {
     logo: absoluteUrl(DEFAULT_OG_PATH),
     description: siteConfig.description,
     email: siteConfig.contactEmail,
-    sameAs: socialLinks.map((link) => link.url),
+    sameAs: socialLinks.map((l) => l.url).filter((url) => url !== "#"),
   };
 }
 
@@ -252,7 +254,7 @@ export function createBlogPostingSchema(post: BlogPost) {
     },
     image,
     keywords: post.tags.join(", "),
-    timeRequired: `PT${post.readingTime}M`,
+    timeRequired: `PT${post.readingTime ?? 1}M`,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": absoluteUrl(`/blog/${post.slug}`),

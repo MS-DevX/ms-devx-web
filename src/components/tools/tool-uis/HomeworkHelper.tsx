@@ -122,7 +122,7 @@ export default function HomeworkHelper({ className }: ToolUiProps) {
           />
         </div>
       ) : (
-        <div className="rounded-lg border border-dashed border-white/20 bg-muted/20 p-6 text-center">
+        <div className="rounded-lg border border-dashed border-border bg-muted/20 p-6 text-center">
           <Upload className="mx-auto mb-2 size-8 text-electric" />
           <p className="text-sm font-medium">Upload homework file</p>
           <Input
@@ -156,11 +156,11 @@ export default function HomeworkHelper({ className }: ToolUiProps) {
       </Button>
 
       {showOutput && answer && (
-        <div className="animate-in fade-in rounded-lg border border-white/10 bg-muted/30 p-4 duration-300">
+        <div className="animate-in fade-in rounded-lg border border-border bg-muted/30 p-4 duration-300">
           <p className="mb-2 text-xs font-medium uppercase tracking-wide text-electric">
             AI explanation
           </p>
-          <pre className="whitespace-pre-wrap font-sans text-sm leading-relaxed text-navy dark:text-white">
+          <pre className="whitespace-pre-wrap font-sans text-sm leading-relaxed text-foreground">
             {answer}
           </pre>
         </div>

@@ -89,12 +89,12 @@ export default function CoverLetterWriter({ className }: ToolUiProps) {
         </Button>
       </div>
 
-      <div className="rounded-lg border border-white/10 bg-muted/30 p-4 lg:min-h-[320px]">
+      <div className="rounded-lg border border-border bg-muted/30 p-4 lg:min-h-[320px]">
         <p className="mb-3 text-xs font-medium uppercase tracking-wide text-electric">
           Cover letter preview
         </p>
         {showOutput && output ? (
-          <p className="animate-in fade-in whitespace-pre-wrap text-sm leading-relaxed text-navy duration-300 dark:text-white">
+          <p className="animate-in fade-in whitespace-pre-wrap text-sm leading-relaxed text-foreground duration-300">
             {output}
           </p>
         ) : (

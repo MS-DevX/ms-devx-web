@@ -87,9 +87,9 @@ export default function PdfToolkit({ className }: ToolUiProps) {
 
     return (
       <TabsContent value={action} className="space-y-4 pt-4">
-        <div className="rounded-lg border border-dashed border-white/20 bg-muted/20 p-6 text-center">
+        <div className="rounded-lg border border-dashed border-border bg-muted/20 p-6 text-center">
           <FileUp className="mx-auto mb-2 size-8 text-electric" />
-          <p className="text-sm font-medium text-navy dark:text-white">
+          <p className="text-sm font-medium text-foreground">
             Upload PDF for {label}
           </p>
           <p className="mt-1 text-xs text-muted-foreground">
@@ -128,8 +128,8 @@ export default function PdfToolkit({ className }: ToolUiProps) {
             className={cn(
               "animate-in fade-in flex items-start gap-2 rounded-lg border p-3 text-sm duration-300",
               state.success
-                ? "border-teal/30 bg-teal/10 text-navy dark:text-white"
-                : "border-white/10 bg-muted/30 text-muted-foreground"
+                ? "border-teal/30 bg-teal/10 text-foreground"
+                : "border-border bg-muted/30 text-muted-foreground"
             )}
           >
             {state.success && (

@@ -28,7 +28,7 @@ function getStatusBadgeClass(status: Tool["status"]): string {
     return "border-teal/40 bg-teal/10 text-teal";
   }
 
-  return "border-white/20 bg-muted/50 text-muted-foreground";
+  return "border-border bg-muted/50 text-muted-foreground";
 }
 
 export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
@@ -90,7 +90,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
         {filteredTools.map((tool) => (
           <Card
             key={tool.id}
-            className="flex flex-col border-white/10 bg-background py-5 transition duration-200 hover:-translate-y-1 hover:border-electric/40 hover:shadow-lg"
+            className="flex flex-col border-border bg-background py-5 transition duration-200 hover:-translate-y-1 hover:border-electric/40 hover:shadow-lg"
           >
             <CardHeader>
               <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -102,7 +102,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
                   {tool.status === "live" ? "Live" : "Coming Soon"}
                 </Badge>
               </div>
-              <CardTitle className="text-lg text-navy dark:text-white">
+              <CardTitle className="text-lg text-foreground">
                 {tool.name}
               </CardTitle>
             </CardHeader>

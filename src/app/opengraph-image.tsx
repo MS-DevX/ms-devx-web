@@ -24,7 +24,7 @@ export default function Image() {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          background: `linear-gradient(135deg, ${siteConfig.colors.navy}, ${siteConfig.colors.electric})`,
+          background: "linear-gradient(135deg, #0D1117, #161B22)",
           color: "white",
           fontSize: 64,
           fontWeight: 700,

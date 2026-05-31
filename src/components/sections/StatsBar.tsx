@@ -53,7 +53,7 @@ export default function StatsBar({ className }: StatsBarProps) {
     <section
       ref={ref}
       className={cn(
-        "border-y border-white/10 bg-background py-12",
+        "border-y border-border bg-background py-12",
         className
       )}
     >

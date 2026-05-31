@@ -14,10 +14,10 @@ export interface FeaturedAppsProps {
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-background p-5 transition hover:shadow-lg">
+    <div className="rounded-xl border border-border bg-background p-5 transition hover:shadow-lg">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h3 className="font-semibold text-navy dark:text-white">{app.name}</h3>
+          <h3 className="font-semibold text-foreground">{app.name}</h3>
           <p className="mt-1 text-xs text-muted-foreground">{app.description}</p>
         </div>
 

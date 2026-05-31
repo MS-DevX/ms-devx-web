@@ -33,17 +33,17 @@ export const navLinks: NavItem[] = [
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/msdevx",
+    url: "https://github.com/MS-DevX",
     icon: "github",
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/msdevx",
+    url: "https://x.com/MSDevX",
     icon: "twitter",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/company/msdevx",
+    url: "#",
     icon: "linkedin",
   },
 ];

@@ -14,11 +14,11 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
   const isComingSoon = app.status === "coming-soon";
 
   return (
-    <div className="rounded-xl border border-white/10 bg-background p-5 transition hover:shadow-lg">
+    <div className="rounded-xl border border-border bg-background p-5 transition hover:shadow-lg">
       <div className="mb-2 flex flex-wrap items-center gap-2">
-        <h3 className="font-semibold text-navy dark:text-white">{app.name}</h3>
+        <h3 className="font-semibold text-foreground">{app.name}</h3>
         {isComingSoon && (
-          <Badge variant="outline" className="border-white/20 bg-muted/50 text-muted-foreground">
+          <Badge variant="outline" className="border-border bg-muted/50 text-muted-foreground">
             Coming Soon
           </Badge>
         )}

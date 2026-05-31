@@ -45,7 +45,7 @@ export default function NotFound() {
           404
         </p>
 
-        <h1 className="mt-4 text-3xl font-bold text-navy dark:text-white sm:text-4xl">
+        <h1 className="mt-4 text-3xl font-bold text-foreground sm:text-4xl">
           Page Not Found
         </h1>
 
@@ -74,9 +74,9 @@ export default function NotFound() {
           </Button>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-3 border-t border-white/10 pt-10">
+        <div className="mt-16 flex flex-col items-center gap-3 border-t border-border pt-10">
           <BrandLogo />
-          <p className="text-lg font-bold text-navy dark:text-white">
+          <p className="text-lg font-bold text-foreground">
             {siteConfig.name}
           </p>
           <p className="text-sm text-electric">{siteConfig.tagline}</p>

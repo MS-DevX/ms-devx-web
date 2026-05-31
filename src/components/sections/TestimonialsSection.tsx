@@ -34,14 +34,14 @@ function TestimonialCard({
   item: (typeof testimonials)[number];
 }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-background p-6 transition hover:shadow-lg">
+    <div className="rounded-xl border border-border bg-background p-6 transition hover:shadow-lg">
       <p className="text-sm leading-relaxed text-muted-foreground">
         &ldquo;{item.quote}&rdquo;
       </p>
 
       <div className="mt-5 flex items-center justify-between gap-4">
         <div>
-          <p className="font-semibold text-navy dark:text-white">{item.name}</p>
+          <p className="font-semibold text-foreground">{item.name}</p>
           <p className="text-xs text-muted-foreground">
             {item.role} · {item.company}
           </p>

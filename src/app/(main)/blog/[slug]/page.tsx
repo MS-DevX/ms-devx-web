@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <PageBreadcrumbs items={breadcrumbs} />
 
         <header className="mb-10">
-          <h1 className="text-4xl font-bold text-navy dark:text-white">
+          <h1 className="text-4xl font-bold text-foreground">
             {post.title}
           </h1>
 
@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {post.coverImage && (
-            <div className="mt-8 overflow-hidden rounded-xl border border-white/10">
+            <div className="mt-8 overflow-hidden rounded-xl border border-border">
               <Image
                 src={post.coverImage}
                 alt={`Cover image for ${post.title}`}
@@ -143,7 +143,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {previousPost ? (
             <Link
               href={`/blog/${previousPost.slug}`}
-              className="rounded-xl border border-white/10 p-4 transition hover:border-electric focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+              className="rounded-xl border border-border p-4 transition hover:border-electric focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
               <p className="text-xs text-muted-foreground">Previous</p>
               <p className="mt-1 font-medium">{previousPost.title}</p>
@@ -155,7 +155,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {nextPost ? (
             <Link
               href={`/blog/${nextPost.slug}`}
-              className="rounded-xl border border-white/10 p-4 text-right transition hover:border-electric focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+              className="rounded-xl border border-border p-4 text-right transition hover:border-electric focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
             >
               <p className="text-xs text-muted-foreground">Next</p>
               <p className="mt-1 font-medium">{nextPost.title}</p>

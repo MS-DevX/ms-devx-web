@@ -24,7 +24,7 @@ export default function NavBar({ className }: NavBarProps) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-white/10 bg-background/80 backdrop-blur-lg",
+        "sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg",
         className
       )}
     >
@@ -48,7 +48,7 @@ export default function NavBar({ className }: NavBarProps) {
           </div>
 
           <div className="flex flex-col leading-none">
-            <span className="text-lg font-bold text-navy dark:text-white">
+            <span className="text-lg font-bold text-foreground">
               MS
             </span>
             <span className="text-xs font-medium tracking-widest text-electric">

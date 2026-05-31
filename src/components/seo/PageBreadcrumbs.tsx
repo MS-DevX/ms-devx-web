@@ -27,7 +27,7 @@ export default function PageBreadcrumbs({
               )}
               {isLast ? (
                 <span
-                  className="font-medium text-navy dark:text-white"
+                  className="font-medium text-muted-foreground"
                   aria-current="page"
                 >
                   {item.name}

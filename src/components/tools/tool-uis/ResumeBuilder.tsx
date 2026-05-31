@@ -116,18 +116,18 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
       </div>
 
       <div className="space-y-4">
-        <div className="rounded-lg border border-white/10 bg-muted/30 p-4">
+        <div className="rounded-lg border border-border bg-muted/30 p-4">
           <p className="mb-3 text-xs font-medium uppercase tracking-wide text-electric">
             Live preview
           </p>
-          <h3 className="text-lg font-bold text-navy dark:text-white">
+          <h3 className="text-lg font-bold text-foreground">
             {livePreview.name}
           </h3>
           <div className="mt-3 flex flex-wrap gap-2">
             {livePreview.skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-white/10 px-2 py-0.5 text-xs text-muted-foreground"
+                className="rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground"
               >
                 {skill}
               </span>
@@ -143,7 +143,7 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
             <p className="mb-2 text-xs font-medium uppercase tracking-wide text-teal">
               AI-generated resume
             </p>
-            <pre className="whitespace-pre-wrap font-sans text-sm text-navy dark:text-white">
+            <pre className="whitespace-pre-wrap font-sans text-sm text-foreground">
               {generated}
             </pre>
           </div>

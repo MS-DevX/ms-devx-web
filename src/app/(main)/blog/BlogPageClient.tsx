@@ -12,9 +12,9 @@ import type { BlogCardProps, BlogPageClientProps } from "@/lib/types";
 
 function BlogCard({ post }: BlogCardProps) {
   return (
-    <article className="rounded-xl border border-white/10 bg-background p-5 transition hover:shadow-lg">
+    <article className="rounded-xl border border-border bg-background p-5 transition hover:shadow-lg">
       <Link href={`/blog/${post.slug}`}>
-        <h2 className="text-lg font-semibold text-navy transition hover:text-electric dark:text-white">
+        <h2 className="text-lg font-semibold text-foreground transition hover:text-electric">
           {post.title}
         </h2>
       </Link>

@@ -59,7 +59,7 @@ function getStatusBadgeClass(status: ToolStatus): string {
     return "border-teal/40 bg-teal/10 text-teal";
   }
 
-  return "border-white/20 bg-muted/50 text-muted-foreground";
+  return "border-border bg-muted/50 text-muted-foreground";
 }
 
 export default function ToolLayout({
@@ -85,7 +85,7 @@ export default function ToolLayout({
 
         <header className="space-y-4">
           <div className="flex flex-wrap items-start gap-3">
-            <h1 className="text-3xl font-bold text-navy dark:text-white sm:text-4xl">
+            <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
               {title}
             </h1>
             {status && (
@@ -105,7 +105,7 @@ export default function ToolLayout({
 
       <section
         aria-label="Tool workspace"
-        className="rounded-xl border border-white/10 bg-background p-5 shadow-sm sm:p-8"
+        className="rounded-xl border border-border bg-background p-5 shadow-sm sm:p-8"
       >
         {children}
       </section>
@@ -113,7 +113,7 @@ export default function ToolLayout({
       <section aria-labelledby="how-it-works-heading">
         <h2
           id="how-it-works-heading"
-          className="mb-6 text-xl font-semibold text-navy dark:text-white"
+          className="mb-6 text-xl font-semibold text-foreground"
         >
           How it works
         </h2>
@@ -125,7 +125,7 @@ export default function ToolLayout({
             return (
               <Card
                 key={item.step}
-                className="border-white/10 bg-background py-5 transition hover:border-electric/30 hover:shadow-md"
+                className="border-border bg-background py-5 transition hover:border-electric/30 hover:shadow-md"
               >
                 <CardHeader>
                   <div className="mb-2 flex items-center gap-3">
@@ -136,7 +136,7 @@ export default function ToolLayout({
                       <Icon className="size-4 text-electric" />
                     </div>
                   </div>
-                  <CardTitle className="text-base text-navy dark:text-white">
+                  <CardTitle className="text-base text-foreground">
                     {item.title}
                   </CardTitle>
                 </CardHeader>
@@ -154,7 +154,7 @@ export default function ToolLayout({
       <section aria-labelledby="related-tools-heading">
         <h2
           id="related-tools-heading"
-          className="mb-6 text-xl font-semibold text-navy dark:text-white"
+          className="mb-6 text-xl font-semibold text-foreground"
         >
           Related Tools
         </h2>
@@ -163,10 +163,10 @@ export default function ToolLayout({
           {relatedToolPlaceholders.map((label) => (
             <Card
               key={label}
-              className="border-white/10 bg-background py-5 transition hover:-translate-y-0.5 hover:border-electric/30 hover:shadow-md"
+              className="border-border bg-background py-5 transition hover:-translate-y-0.5 hover:border-electric/30 hover:shadow-md"
             >
               <CardHeader>
-                <CardTitle className="text-base text-navy dark:text-white">
+                <CardTitle className="text-base text-foreground">
                   {label}
                 </CardTitle>
               </CardHeader>

@@ -25,10 +25,10 @@ export default function ServicesSection({ className }: ServicesSectionProps) {
           {services.map((service) => (
             <div
               key={service.id}
-              className="rounded-xl border border-white/10 bg-background p-6 transition hover:shadow-lg"
+              className="rounded-xl border border-border bg-background p-6 transition hover:shadow-lg"
             >
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-xl font-semibold text-navy dark:text-white">
+                <h3 className="text-xl font-semibold text-foreground">
                   {service.title}
                 </h3>
 
@@ -47,11 +47,11 @@ export default function ServicesSection({ className }: ServicesSectionProps) {
                       "rounded-lg border p-4 transition",
                       tier.highlighted
                         ? "border-electric bg-electric/5"
-                        : "border-white/10"
+                        : "border-border"
                     )}
                   >
                     <div className="flex items-center justify-between">
-                      <h4 className="font-medium text-navy dark:text-white">
+                      <h4 className="font-medium text-foreground">
                         {tier.name}
                       </h4>
 

@@ -152,7 +152,7 @@ export default function HifzTracker({ className }: ToolUiProps) {
   return (
     <div className={cn("space-y-6", className)}>
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg border border-white/10 p-4">
+        <div className="rounded-lg border border-border p-4">
           <p className="text-sm text-muted-foreground">Memorization progress</p>
           <p className="mt-1 text-2xl font-bold text-electric">{progress}%</p>
           <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted">
@@ -166,10 +166,10 @@ export default function HifzTracker({ className }: ToolUiProps) {
           </p>
         </div>
 
-        <div className="flex flex-col justify-between rounded-lg border border-white/10 p-4">
+        <div className="flex flex-col justify-between rounded-lg border border-border p-4">
           <div>
             <p className="text-sm text-muted-foreground">Current streak</p>
-            <p className="mt-1 flex items-center gap-2 text-2xl font-bold text-navy dark:text-white">
+            <p className="mt-1 flex items-center gap-2 text-2xl font-bold text-foreground">
               <Flame className="size-6 text-teal" />
               {streak} days
             </p>
@@ -186,7 +186,7 @@ export default function HifzTracker({ className }: ToolUiProps) {
         </div>
       </div>
 
-      <ScrollArea className="h-80 rounded-lg border border-white/10 p-4">
+      <ScrollArea className="h-80 rounded-lg border border-border p-4">
         <ul className="space-y-2 pr-4">
           {SURAH_NAMES.map((surah, index) => {
             const checked = memorized.has(index);
@@ -198,7 +198,7 @@ export default function HifzTracker({ className }: ToolUiProps) {
                     type="checkbox"
                     checked={checked}
                     onChange={() => toggleSurah(index)}
-                    className="size-4 rounded border-white/20 accent-electric"
+                    className="size-4 rounded border-border accent-electric"
                   />
                   <span className="w-8 text-xs text-muted-foreground">
                     {index + 1}.
@@ -208,7 +208,7 @@ export default function HifzTracker({ className }: ToolUiProps) {
                       "text-sm",
                       checked
                         ? "font-medium text-teal line-through"
-                        : "text-navy dark:text-white"
+                        : "text-foreground"
                     )}
                   >
                     {surah}

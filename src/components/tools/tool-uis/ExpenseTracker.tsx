@@ -62,7 +62,7 @@ export default function ExpenseTracker({ className }: ToolUiProps) {
 
   return (
     <div className={cn("space-y-6", className)}>
-      <div className="rounded-lg border border-white/10 bg-muted/20 p-4">
+      <div className="rounded-lg border border-border bg-muted/20 p-4">
         <p className="text-sm text-muted-foreground">Total expenses</p>
         <p className="text-3xl font-bold text-electric">
           ${total.toFixed(2)}
@@ -124,9 +124,9 @@ export default function ExpenseTracker({ className }: ToolUiProps) {
         Add expense
       </Button>
 
-      <div className="overflow-x-auto rounded-lg border border-white/10">
+      <div className="overflow-x-auto rounded-lg border border-border">
         <table className="w-full min-w-[480px] text-sm">
-          <thead className="border-b border-white/10 bg-muted/30">
+          <thead className="border-b border-border bg-muted/30">
             <tr>
               <th className="px-4 py-3 text-left font-medium">Title</th>
               <th className="px-4 py-3 text-left font-medium">Category</th>
@@ -148,9 +148,9 @@ export default function ExpenseTracker({ className }: ToolUiProps) {
               expenses.map((expense) => (
                 <tr
                   key={expense.id}
-                  className="border-b border-white/5 last:border-0"
+                  className="border-b border-border/50 last:border-0"
                 >
-                  <td className="px-4 py-3 font-medium text-navy dark:text-white">
+                  <td className="px-4 py-3 font-medium text-foreground">
                     {expense.title}
                   </td>
                   <td className="px-4 py-3">

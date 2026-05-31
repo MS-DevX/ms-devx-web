@@ -13,11 +13,11 @@ export interface FooterProps {
 export default function Footer({ className }: FooterProps) {
   return (
     <footer
-      className={cn("border-t border-white/10 bg-background", className)}
+      className={cn("border-t border-border bg-background", className)}
     >
       <div className="container grid gap-10 py-12 md:grid-cols-3">
         <div>
-          <h2 className="text-xl font-bold text-navy dark:text-white">
+          <h2 className="text-xl font-bold text-foreground">
             {siteConfig.name}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -30,7 +30,7 @@ export default function Footer({ className }: FooterProps) {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-navy dark:text-white">
+          <h3 className="text-sm font-semibold text-foreground">
             Navigation
           </h3>
 
@@ -49,7 +49,7 @@ export default function Footer({ className }: FooterProps) {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-navy dark:text-white">
+          <h3 className="text-sm font-semibold text-foreground">
             About
           </h3>
 
@@ -59,7 +59,7 @@ export default function Footer({ className }: FooterProps) {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-4">
+      <div className="border-t border-border py-4">
         <div className="container flex flex-col items-center justify-between gap-3 text-xs text-muted-foreground md:flex-row">
           <Suspense
             fallback={

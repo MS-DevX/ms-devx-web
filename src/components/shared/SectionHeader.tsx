@@ -14,7 +14,7 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={cn("mx-auto mb-12 max-w-2xl text-center", className)}>
-      <h2 className="text-3xl font-bold text-navy dark:text-white">{title}</h2>
+      <h2 className="text-3xl font-bold text-foreground">{title}</h2>
 
       {subtitle && (
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

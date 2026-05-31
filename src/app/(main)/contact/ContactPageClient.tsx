@@ -102,7 +102,7 @@ export default function ContactPageClient({
     <main className={cn("py-20", className)}>
       <div className="container">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h1 className="text-4xl font-bold text-navy dark:text-white">
+          <h1 className="text-4xl font-bold text-foreground">
             Get in Touch
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
@@ -113,9 +113,9 @@ export default function ContactPageClient({
         </div>
 
         <div className="grid gap-10 lg:grid-cols-2">
-          <Card className="border-white/10 bg-background py-6">
+          <Card className="border-border bg-background py-6">
             <CardHeader>
-              <CardTitle className="text-xl text-navy dark:text-white">
+              <CardTitle className="text-xl text-foreground">
                 Send a Message
               </CardTitle>
               <CardDescription>
@@ -128,7 +128,7 @@ export default function ContactPageClient({
               {status === "success" && (
                 <div
                   role="status"
-                  className="mb-6 flex items-start gap-3 rounded-lg border border-teal/30 bg-teal/10 p-4 text-sm text-navy dark:text-white"
+                  className="mb-6 flex items-start gap-3 rounded-lg border border-teal/30 bg-teal/10 p-4 text-sm text-foreground"
                 >
                   <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal" />
                   <div>
@@ -258,9 +258,9 @@ export default function ContactPageClient({
           </Card>
 
           <div className="space-y-6">
-            <Card className="border-white/10 bg-background py-6">
+            <Card className="border-border bg-background py-6">
               <CardHeader>
-                <CardTitle className="text-xl text-navy dark:text-white">
+                <CardTitle className="text-xl text-foreground">
                   Contact Information
                 </CardTitle>
                 <CardDescription>
@@ -301,7 +301,7 @@ export default function ContactPageClient({
 
             <Card className="border-electric/30 bg-electric/5 py-6">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-xl text-navy dark:text-white">
+                <CardTitle className="flex items-center gap-2 text-xl text-foreground">
                   <Calendar className="size-5 text-electric" />
                   Schedule a Call
                 </CardTitle>
@@ -312,8 +312,8 @@ export default function ContactPageClient({
               </CardHeader>
 
               <CardContent>
-                <div className="rounded-lg border border-dashed border-white/20 bg-background/50 p-6 text-center">
-                  <p className="text-sm font-medium text-navy dark:text-white">
+                <div className="rounded-lg border border-dashed border-border bg-background/50 p-6 text-center">
+                  <p className="text-sm font-medium text-foreground">
                     Calendly integration coming soon
                   </p>
                   <p className="mt-2 text-xs text-muted-foreground">
@@ -327,14 +327,14 @@ export default function ContactPageClient({
 
         {faqs.length > 0 && (
           <section className="mt-16">
-            <h2 className="mb-6 text-center text-2xl font-bold text-navy dark:text-white">
+            <h2 className="mb-6 text-center text-2xl font-bold text-foreground">
               Frequently Asked Questions
             </h2>
-            <div className="mx-auto max-w-3xl rounded-xl border border-white/10 bg-background px-4 sm:px-6">
+            <div className="mx-auto max-w-3xl rounded-xl border border-border bg-background px-4 sm:px-6">
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((item) => (
                   <AccordionItem key={item.question} value={item.question}>
-                    <AccordionTrigger className="text-left text-navy dark:text-white">
+                    <AccordionTrigger className="text-left text-foreground">
                       {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground">

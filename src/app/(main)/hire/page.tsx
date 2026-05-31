@@ -158,7 +158,7 @@ export default function HirePage() {
               <Card
                 key={pkg.id}
                 className={cn(
-                  "flex flex-col border-white/10 bg-background py-6",
+                  "flex flex-col border-border bg-background py-6",
                   pkg.highlighted &&
                     "border-electric ring-1 ring-electric/30 lg:scale-[1.02]"
                 )}
@@ -169,7 +169,7 @@ export default function HirePage() {
                       Most Popular
                     </span>
                   )}
-                  <CardTitle className="text-xl text-navy dark:text-white">
+                  <CardTitle className="text-xl text-foreground">
                     {pkg.name}
                   </CardTitle>
                   <p className="text-2xl font-bold text-electric">
@@ -220,10 +220,10 @@ export default function HirePage() {
             {freelancePlatforms.map((platform) => (
               <Card
                 key={platform.name}
-                className="border-white/10 bg-background py-6 transition hover:border-electric/50"
+                className="border-border bg-background py-6 transition hover:border-electric/50"
               >
                 <CardHeader>
-                  <CardTitle className="flex items-center justify-between text-lg text-navy dark:text-white">
+                  <CardTitle className="flex items-center justify-between text-lg text-foreground">
                     {platform.name}
                     <ArrowUpRight className="size-5 text-electric" />
                   </CardTitle>
@@ -254,11 +254,11 @@ export default function HirePage() {
             className="mb-10"
           />
 
-          <div className="mx-auto max-w-3xl rounded-xl border border-white/10 bg-background px-4 sm:px-6">
+          <div className="mx-auto max-w-3xl rounded-xl border border-border bg-background px-4 sm:px-6">
             <Accordion type="single" collapsible className="w-full">
               {faqs.hire.map((item) => (
                 <AccordionItem key={item.question} value={item.question}>
-                  <AccordionTrigger className="text-left text-navy dark:text-white">
+                  <AccordionTrigger className="text-left text-foreground">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">
@@ -270,8 +270,8 @@ export default function HirePage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-white/10 bg-electric/5 px-6 py-12 text-center sm:px-10">
-          <h2 className="text-2xl font-bold text-navy dark:text-white">
+        <section className="rounded-2xl border border-border bg-electric/5 px-6 py-12 text-center sm:px-10">
+          <h2 className="text-2xl font-bold text-foreground">
             Ready to move fast?
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">

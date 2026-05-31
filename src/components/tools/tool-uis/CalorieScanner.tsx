@@ -55,9 +55,9 @@ export default function CalorieScanner({ className }: ToolUiProps) {
   return (
     <div className={cn("grid gap-6 lg:grid-cols-2", className)}>
       <div className="space-y-4">
-        <div className="rounded-lg border border-dashed border-white/20 bg-muted/20 p-6 text-center">
+        <div className="rounded-lg border border-dashed border-border bg-muted/20 p-6 text-center">
           <ImageIcon className="mx-auto mb-2 size-10 text-electric" />
-          <p className="text-sm font-medium text-navy dark:text-white">
+          <p className="text-sm font-medium text-foreground">
             Upload a food photo
           </p>
           <p className="mt-1 text-xs text-muted-foreground">
@@ -75,7 +75,7 @@ export default function CalorieScanner({ className }: ToolUiProps) {
         </div>
 
         {previewUrl && (
-          <div className="overflow-hidden rounded-lg border border-white/10">
+          <div className="overflow-hidden rounded-lg border border-border">
             <Image
               src={previewUrl}
               alt="Food preview"
@@ -107,39 +107,39 @@ export default function CalorieScanner({ className }: ToolUiProps) {
         </Button>
       </div>
 
-      <div className="rounded-lg border border-white/10 bg-muted/20 p-4 lg:min-h-[280px]">
+      <div className="rounded-lg border border-border bg-muted/20 p-4 lg:min-h-[280px]">
         <p className="mb-4 text-xs font-medium uppercase tracking-wide text-electric">
           Nutrition estimate
         </p>
 
         {showOutput && result ? (
           <div className="animate-in fade-in space-y-4 duration-300">
-            <p className="text-lg font-semibold capitalize text-navy dark:text-white">
+            <p className="text-lg font-semibold capitalize text-foreground">
               {result.label}
             </p>
 
             <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-lg border border-white/10 bg-background p-3">
+              <div className="rounded-lg border border-border bg-background p-3">
                 <p className="text-xs text-muted-foreground">Calories</p>
                 <p className="text-xl font-bold text-electric">
                   {result.calories}
                 </p>
               </div>
-              <div className="rounded-lg border border-white/10 bg-background p-3">
+              <div className="rounded-lg border border-border bg-background p-3">
                 <p className="text-xs text-muted-foreground">Protein</p>
-                <p className="text-xl font-bold text-navy dark:text-white">
+                <p className="text-xl font-bold text-foreground">
                   {result.protein}g
                 </p>
               </div>
-              <div className="rounded-lg border border-white/10 bg-background p-3">
+              <div className="rounded-lg border border-border bg-background p-3">
                 <p className="text-xs text-muted-foreground">Carbs</p>
-                <p className="text-xl font-bold text-navy dark:text-white">
+                <p className="text-xl font-bold text-foreground">
                   {result.carbs}g
                 </p>
               </div>
-              <div className="rounded-lg border border-white/10 bg-background p-3">
+              <div className="rounded-lg border border-border bg-background p-3">
                 <p className="text-xs text-muted-foreground">Fat</p>
-                <p className="text-xl font-bold text-navy dark:text-white">
+                <p className="text-xl font-bold text-foreground">
                   {result.fat}g
                 </p>
               </div>

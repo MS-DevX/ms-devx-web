@@ -26,7 +26,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-navy md:text-6xl dark:text-white"
+          className="text-4xl font-bold text-foreground md:text-6xl"
         >
           <AnimatedText text="Build smarter." delay={0.2} />{" "}
           <AnimatedText

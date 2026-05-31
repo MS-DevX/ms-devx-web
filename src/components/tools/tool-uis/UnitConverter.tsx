@@ -131,7 +131,7 @@ export default function UnitConverter({ className }: ToolUiProps) {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="space-y-3 rounded-lg border border-white/10 p-4">
+        <div className="space-y-3 rounded-lg border border-border p-4">
           <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
             From
           </p>
@@ -157,7 +157,7 @@ export default function UnitConverter({ className }: ToolUiProps) {
           />
         </div>
 
-        <div className="space-y-3 rounded-lg border border-white/10 p-4">
+        <div className="space-y-3 rounded-lg border border-border p-4">
           <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
             To
           </p>

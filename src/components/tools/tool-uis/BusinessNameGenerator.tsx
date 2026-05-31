@@ -123,10 +123,10 @@ export default function BusinessNameGenerator({ className }: ToolUiProps) {
           {names.map((name) => (
             <div
               key={name}
-              className="flex items-center justify-between gap-2 rounded-lg border border-white/10 bg-muted/20 p-3 transition hover:border-electric/40 hover:shadow-md"
+              className="flex items-center justify-between gap-2 rounded-lg border border-border bg-muted/20 p-3 transition hover:border-electric/40 hover:shadow-md"
             >
               <div>
-                <p className="font-medium text-navy dark:text-white">{name}</p>
+                <p className="font-medium text-foreground">{name}</p>
                 <Badge variant="outline" className="mt-1 text-xs">
                   {style}
                 </Badge>

@@ -76,16 +76,16 @@ export default function PrayerTimes({ className }: ToolUiProps) {
 
         {showTimes && (
           <div className="animate-in fade-in space-y-2 duration-300">
-            <p className="text-sm font-medium text-navy dark:text-white">
+            <p className="text-sm font-medium text-foreground">
               Prayer times for {city}
             </p>
-            <ul className="divide-y divide-white/10 rounded-lg border border-white/10">
+            <ul className="divide-y divide-border rounded-lg border border-border">
               {prayerTimes.map((prayer) => (
                 <li
                   key={prayer.name}
                   className="flex items-center justify-between px-4 py-3 text-sm"
                 >
-                  <span className="font-medium text-navy dark:text-white">
+                  <span className="font-medium text-foreground">
                     {prayer.name}
                   </span>
                   <span className="text-electric">{prayer.time}</span>
@@ -96,8 +96,8 @@ export default function PrayerTimes({ className }: ToolUiProps) {
         )}
       </div>
 
-      <div className="flex flex-col items-center justify-center rounded-lg border border-white/10 bg-muted/20 p-6">
-        <p className="mb-4 flex items-center gap-2 text-sm font-medium text-navy dark:text-white">
+      <div className="flex flex-col items-center justify-center rounded-lg border border-border bg-muted/20 p-6">
+        <p className="mb-4 flex items-center gap-2 text-sm font-medium text-foreground">
           <Compass className="size-4 text-electric" />
           Qibla direction
         </p>

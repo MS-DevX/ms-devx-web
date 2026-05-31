@@ -196,7 +196,7 @@ export default function AboutPage() {
                 {index < timelineItems.length - 1 && (
                   <div
                     aria-hidden="true"
-                    className="absolute top-6 left-[11px] h-full w-px bg-white/10"
+                    className="absolute top-6 left-[11px] h-full w-px bg-border/10"
                   />
                 )}
 
@@ -206,7 +206,7 @@ export default function AboutPage() {
                 />
 
                 <div className="pt-0.5">
-                  <h3 className="font-semibold text-navy dark:text-white">
+                  <h3 className="font-semibold text-foreground">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -231,13 +231,13 @@ export default function AboutPage() {
               return (
                 <Card
                   key={value.title}
-                  className="border-white/10 bg-background py-6"
+                  className="border-border bg-background py-6"
                 >
                   <CardHeader>
                     <div className="mb-2 flex size-10 items-center justify-center rounded-lg bg-electric/10">
                       <Icon className="size-5 text-electric" />
                     </div>
-                    <CardTitle className="text-lg text-navy dark:text-white">
+                    <CardTitle className="text-lg text-foreground">
                       {value.title}
                     </CardTitle>
                   </CardHeader>
@@ -263,7 +263,7 @@ export default function AboutPage() {
               <Badge
                 key={tech}
                 variant="outline"
-                className="px-4 py-2 text-sm text-navy dark:text-white"
+                className="px-4 py-2 text-sm text-foreground"
               >
                 {tech}
               </Badge>
@@ -271,8 +271,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-white/10 bg-electric/5 px-6 py-12 text-center sm:px-10">
-          <h2 className="text-2xl font-bold text-navy dark:text-white">
+        <section className="rounded-2xl border border-border bg-electric/5 px-6 py-12 text-center sm:px-10">
+          <h2 className="text-2xl font-bold text-foreground">
             Let&apos;s build something useful.
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">

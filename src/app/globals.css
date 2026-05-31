@@ -1,11 +1,14 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* ================================
    MS DevX DESIGN SYSTEM (v1)
    Tailwind v4 Theme Tokens
 ================================ */
 
+
+/*  Light Mode Codes  ================================ */
 :root {
   --background: #ffffff;
   --foreground: #1F2328;
@@ -28,6 +31,7 @@
   --ring: #0969DA;
 }
 
+/*  Dark Mode Codes  ================================ */
 .dark {
   --background: #0D1117;
   --foreground: #E6EDF3;
@@ -61,6 +65,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-popover: var(--popover);
+  --color-ring: var(--ring);
 
   --gradient-primary: linear-gradient(135deg, var(--color-navy), var(--color-electric));
   --gradient-accent: linear-gradient(135deg, var(--color-electric), var(--color-sky));
@@ -89,7 +98,7 @@ body {
 }
 
 .glass {
-  @apply backdrop-blur-md bg-white/60 border border-white/20;
+  @apply backdrop-blur-md bg-background/60 border border-border;
 }
 
 .btn-primary {

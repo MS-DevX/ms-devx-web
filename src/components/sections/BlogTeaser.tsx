@@ -16,9 +16,9 @@ function BlogCard({
   post: Awaited<ReturnType<typeof getAllPosts>>[number];
 }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-background p-5 transition hover:shadow-lg">
+    <div className="rounded-xl border border-border bg-background p-5 transition hover:shadow-lg">
       <Link href={`/blog/${post.slug}`}>
-        <h3 className="text-lg font-semibold text-navy transition hover:text-electric dark:text-white">
+        <h3 className="text-lg font-semibold text-foreground transition hover:text-electric">
           {post.title}
         </h3>
       </Link>
@@ -54,7 +54,7 @@ function BlogTeaserSkeleton({ className }: BlogTeaserProps) {
           {Array.from({ length: 3 }).map((_, i) => (
             <div
               key={i}
-              className="h-48 animate-pulse rounded-xl border border-white/10 bg-background"
+              className="h-48 animate-pulse rounded-xl border border-border bg-background"
             />
           ))}
         </div>

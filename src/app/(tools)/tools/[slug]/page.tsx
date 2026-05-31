@@ -139,7 +139,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
           <ToolComponent />
         ) : (
           <div className="flex flex-col items-center justify-center py-16 text-center">
-            <h2 className="text-2xl font-bold text-navy dark:text-white">
+            <h2 className="text-2xl font-bold text-foreground">
               Coming Soon
             </h2>
             <p className="mt-2 max-w-md text-sm text-muted-foreground">
