@@ -125,135 +125,152 @@ export default function ContactPageClient({
             </CardHeader>
 
             <CardContent>
-              {status === "success" && (
-                <div
-                  role="status"
-                  className="mb-6 flex items-start gap-3 rounded-lg border border-teal/30 bg-teal/10 p-4 text-sm text-foreground"
-                >
-                  <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-teal" />
-                  <div>
-                    <p className="font-medium">Message sent successfully</p>
-                    <p className="mt-1 text-muted-foreground">
-                      Thank you for reaching out. We&apos;ll be in touch soon.
-                    </p>
+              {status === "success" ? (
+                <div className="flex flex-col items-center justify-center py-10 text-center">
+                  <div className="mb-6 flex size-16 items-center justify-center rounded-full bg-teal/10">
+                    <CheckCircle2 className="size-8 text-teal" />
                   </div>
+                  <h3 className="mb-2 text-2xl font-bold text-foreground">
+                    Thank You!
+                  </h3>
+                  <p className="mb-1 max-w-sm text-muted-foreground">
+                    Your message has been sent successfully. We&apos;ll review
+                    it and get back to you within 1–2 business days.
+                  </p>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="lg"
+                    onClick={() => {
+                      setStatus("idle");
+                      setSubmitError(null);
+                      reset();
+                    }}
+                    className="mt-8"
+                  >
+                    Send Another Message
+                  </Button>
                 </div>
+              ) : (
+                <>
+                  {status === "error" && submitError && (
+                    <div
+                      role="alert"
+                      className="mb-6 flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/10 p-4 text-sm"
+                    >
+                      <AlertCircle className="mt-0.5 size-5 shrink-0 text-destructive" />
+                      <div>
+                        <p className="font-medium text-destructive">
+                          Failed to send message
+                        </p>
+                        <p className="mt-1 text-muted-foreground">
+                          {submitError}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  <form
+                    onSubmit={handleSubmit(onSubmit)}
+                    className="space-y-5"
+                    noValidate
+                  >
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Name
+                      </label>
+                      <Input
+                        id="name"
+                        type="text"
+                        autoComplete="name"
+                        placeholder="Your name"
+                        aria-invalid={Boolean(errors.name)}
+                        disabled={isSubmitting}
+                        {...register("name")}
+                      />
+                      {errors.name && (
+                        <p className="text-sm text-destructive">
+                          {errors.name.message}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        Email
+                      </label>
+                      <Input
+                        id="email"
+                        type="email"
+                        autoComplete="email"
+                        placeholder="you@example.com"
+                        aria-invalid={Boolean(errors.email)}
+                        disabled={isSubmitting}
+                        {...register("email")}
+                      />
+                      {errors.email && (
+                        <p className="text-sm text-destructive">
+                          {errors.email.message}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="subject" className="text-sm font-medium">
+                        Subject
+                      </label>
+                      <Input
+                        id="subject"
+                        type="text"
+                        placeholder="What is this about?"
+                        aria-invalid={Boolean(errors.subject)}
+                        disabled={isSubmitting}
+                        {...register("subject")}
+                      />
+                      {errors.subject && (
+                        <p className="text-sm text-destructive">
+                          {errors.subject.message}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="text-sm font-medium">
+                        Message
+                      </label>
+                      <Textarea
+                        id="message"
+                        rows={6}
+                        placeholder="Tell us about your project or question..."
+                        aria-invalid={Boolean(errors.message)}
+                        disabled={isSubmitting}
+                        {...register("message")}
+                      />
+                      {errors.message && (
+                        <p className="text-sm text-destructive">
+                          {errors.message.message}
+                        </p>
+                      )}
+                    </div>
+
+                    <Button
+                      type="submit"
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="w-full bg-electric text-white hover:bg-electric/90 sm:w-auto"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="animate-spin" />
+                          Sending...
+                        </>
+                      ) : (
+                        "Send Message"
+                      )}
+                    </Button>
+                  </form>
+                </>
               )}
-
-              {status === "error" && submitError && (
-                <div
-                  role="alert"
-                  className="mb-6 flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/10 p-4 text-sm"
-                >
-                  <AlertCircle className="mt-0.5 size-5 shrink-0 text-destructive" />
-                  <div>
-                    <p className="font-medium text-destructive">
-                      Failed to send message
-                    </p>
-                    <p className="mt-1 text-muted-foreground">{submitError}</p>
-                  </div>
-                </div>
-              )}
-
-              <form
-                onSubmit={handleSubmit(onSubmit)}
-                className="space-y-5"
-                noValidate
-              >
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    autoComplete="name"
-                    placeholder="Your name"
-                    aria-invalid={Boolean(errors.name)}
-                    disabled={isSubmitting}
-                    {...register("name")}
-                  />
-                  {errors.name && (
-                    <p className="text-sm text-destructive">
-                      {errors.name.message}
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="you@example.com"
-                    aria-invalid={Boolean(errors.email)}
-                    disabled={isSubmitting}
-                    {...register("email")}
-                  />
-                  {errors.email && (
-                    <p className="text-sm text-destructive">
-                      {errors.email.message}
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    type="text"
-                    placeholder="What is this about?"
-                    aria-invalid={Boolean(errors.subject)}
-                    disabled={isSubmitting}
-                    {...register("subject")}
-                  />
-                  {errors.subject && (
-                    <p className="text-sm text-destructive">
-                      {errors.subject.message}
-                    </p>
-                  )}
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    rows={6}
-                    placeholder="Tell us about your project or question..."
-                    aria-invalid={Boolean(errors.message)}
-                    disabled={isSubmitting}
-                    {...register("message")}
-                  />
-                  {errors.message && (
-                    <p className="text-sm text-destructive">
-                      {errors.message.message}
-                    </p>
-                  )}
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmitting}
-                  className="w-full bg-electric text-white hover:bg-electric/90 sm:w-auto"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="animate-spin" />
-                      Sending...
-                    </>
-                  ) : (
-                    "Send Message"
-                  )}
-                </Button>
-              </form>
             </CardContent>
           </Card>
 
