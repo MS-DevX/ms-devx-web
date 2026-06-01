@@ -1,17 +1,9 @@
-import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 import { contactFormSchema } from "@/lib/schemas/contact";
 import type { ContactApiResponse } from "@/lib/types";
 
-function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
-}
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
 const MAX_BODY_BYTES = 32_768;
 
@@ -40,10 +32,9 @@ export async function POST(request: Request) {
       );
     }
 
-    const smtpUser = process.env.SMTP_USER;
-    const smtpPass = process.env.SMTP_PASS;
+    const accessKey = process.env.WEB3FORMS_ACCESS_KEY;
 
-    if (!smtpUser || !smtpPass) {
+    if (!accessKey) {
       return NextResponse.json(
         { success: false, error: "Email service is not configured" } satisfies ContactApiResponse,
         { status: 500 }
@@ -52,27 +43,33 @@ export async function POST(request: Request) {
 
     const { name, email, subject, message } = parsed.data;
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: { user: smtpUser, pass: smtpPass },
+    const response = await fetch(WEB3FORMS_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: accessKey,
+        name,
+        email,
+        subject: `[MS DevX Contact] ${subject}`,
+        message,
+        from_name: "MS DevX",
+        replyto: email,
+      }),
     });
 
-    await transporter.sendMail({
-      from: `"${escapeHtml(name)}" <${smtpUser}>`,
-      to: "marthsystems@gmail.com",
-      replyTo: email,
-      subject: `[MS DevX Contact] ${subject}`,
-      html: `
-        <h2>New contact form submission</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Subject:</strong> ${escapeHtml(subject)}</p>
-        <p><strong>Message:</strong></p>
-        <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
-      `,
-    });
+    const result: unknown = await response.json();
+
+    if (!response.ok) {
+      const errorMessage =
+        typeof result === "object" && result !== null && "message" in result
+          ? String((result as Record<string, unknown>).message)
+          : "Unable to send your message. Please try again.";
+
+      return NextResponse.json(
+        { success: false, error: errorMessage } satisfies ContactApiResponse,
+        { status: response.status }
+      );
+    }
 
     return NextResponse.json(
       { success: true, message: "Your message has been sent successfully." } satisfies ContactApiResponse

@@ -398,4 +398,10 @@ export const pageKeywords = {
     "developer utilities",
     "online tools",
   ],
+  privacy: [
+    "MS DevX privacy policy",
+    "data protection",
+    "privacy policy",
+    "app privacy",
+  ],
 } as const;
