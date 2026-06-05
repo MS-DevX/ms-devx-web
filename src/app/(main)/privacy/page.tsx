@@ -52,6 +52,24 @@ const sections = [
           Since we collect nothing, there is nothing to store, share, or
           sell.
         </p>
+        <p className="mt-3">
+          <strong>We do not collect, store, or share any personal data.</strong>{" "}
+          Our apps do not require an account, registration, or any personally
+          identifiable information.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Device Features",
+    content: (
+      <>
+        <p>
+          Some of our apps may use on-device features (such as sensors, camera,
+          or location) solely for the app&apos;s core functionality. All data
+          from these features is processed entirely on-device and is never
+          transmitted to us or any third party.
+        </p>
       </>
     ),
   },
@@ -72,6 +90,18 @@ const sections = [
           </Link>
           .
         </p>
+        <p className="mt-3">
+          Our free apps use <strong>Google AdMob</strong> to serve advertisements.
+          AdMob may collect device identifiers (e.g., Android Advertising ID) for
+          ad personalization and fraud prevention. See{" "}
+          <Link
+            href="https://policies.google.com/privacy"
+            className="text-electric hover:underline"
+          >
+            Google&apos;s Privacy Policy
+          </Link>{" "}
+          for details.
+        </p>
       </>
     ),
   },
@@ -86,6 +116,12 @@ const sections = [
           by Google Play Store. We <strong>never receive, process, or
           store</strong> any payment or financial information.
         </p>
+        <p className="mt-3">
+          In-app purchases are processed entirely by the{" "}
+          <strong>Google Play Store</strong> or <strong>Apple App Store</strong>.
+          We never receive your payment details. Purchase status (whether a
+          purchase has been made) is stored locally on your device.
+        </p>
       </>
     ),
   },
@@ -97,6 +133,18 @@ const sections = [
           Since our apps collect no personal data, there is no data to
           retain. We do not store, process, or have access to any user
           information from app usage.
+        </p>
+        <p className="mt-3">
+          Our apps may store the following data locally on your device:
+        </p>
+        <ul className="mt-2 list-inside list-disc space-y-1">
+          <li>App preferences and settings</li>
+          <li>Usage history or cached data</li>
+          <li>Purchase status</li>
+        </ul>
+        <p className="mt-3">
+          <strong>None of this data is accessible to us or any third party.</strong>{" "}
+          It can be cleared at any time via your device&apos;s app settings.
         </p>
       </>
     ),
@@ -111,6 +159,10 @@ const sections = [
           has provided us with personal data, we will take steps to
           delete it promptly.
         </p>
+        <p className="mt-3">
+          If you believe a child has provided personal data, please contact us
+          for immediate deletion.
+        </p>
       </>
     ),
   },
@@ -122,6 +174,10 @@ const sections = [
           We may update this Privacy Policy from time to time. Changes will be
           posted on this page with an updated effective date. We encourage you
           to review this policy periodically.
+        </p>
+        <p className="mt-3">
+          This policy may be updated occasionally. Changes will be posted at
+          this URL.
         </p>
       </>
     ),
@@ -138,6 +194,19 @@ const sections = [
             className="text-electric hover:underline"
           >
             reach out to us
+          </Link>
+          .
+        </p>
+        <p className="mt-3">
+          <strong>MS DevX</strong>
+        </p>
+        <p className="mt-3">
+          For any feedback or inquiries, please{" "}
+          <Link
+            href="/contact"
+            className="text-electric hover:underline"
+          >
+            use our contact form
           </Link>
           .
         </p>
@@ -169,7 +238,7 @@ export default function PrivacyPage() {
 
         <SectionHeader
           title="Privacy Policy"
-          subtitle={`Last updated: June 1, 2026 — How ${siteConfig.name} handles your data.`}
+          subtitle={`Last updated: June 2026 — How ${siteConfig.name} handles your data.`}
         />
 
         <div className="mx-auto max-w-3xl space-y-10">
