@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "DevX Notes AI",
+    "description": "AI-powered smart note-taking and summarization workspace.",
+    "category": "Productivity",
+    "iconUrl": "/apps/devx-notes.png",
+    "playStoreUrl": "https://play.google.com",
+    "webUrl": "https://msdevx.com",
+    "badge": "New",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "name": "Quran Companion Lite",
+    "description": "Minimal Islamic study companion with bookmarks and tafsir.",
+    "category": "Islamic",
+    "iconUrl": "/apps/quran-lite.png",
+    "playStoreUrl": "https://play.google.com",
+    "webUrl": "https://msdevx.com",
+    "badge": "Free",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "name": "PDF Swift",
+    "description": "Fast PDF merge, split, and compress toolkit.",
+    "category": "PDF",
+    "iconUrl": "/apps/pdf-swift.png",
+    "playStoreUrl": "https://play.google.com",
+    "webUrl": "https://msdevx.com",
+    "badge": "Paid",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "name": "StudySprint",
+    "description": "Student planner with AI-powered homework tracking.",
+    "category": "Student",
+    "iconUrl": "/apps/studysprint.png",
+    "playStoreUrl": "https://play.google.com",
+    "webUrl": "https://msdevx.com",
+    "badge": "AdMob",
+    "status": "coming-soon",
+    "featured": false
+  },
+  {
+    "id": "5",
+    "name": "LaunchPilot AI",
+    "description": "Startup idea validation and launch planning assistant.",
+    "category": "AI",
+    "iconUrl": "/apps/launchpilot.png",
+    "playStoreUrl": "https://play.google.com",
+    "webUrl": "https://msdevx.com",
+    "badge": "New",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "6",
+    "name": "TaskFlow Mini",
+    "description": "Simple cross-device productivity and habit tracker.",
+    "category": "Productivity",
+    "iconUrl": "/apps/taskflow.png",
+    "playStoreUrl": "https://play.google.com",
+    "webUrl": "https://msdevx.com",
+    "badge": "Free",
+    "status": "coming-soon",
+    "featured": false
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1",
+    "title": "AI Product Development",
+    "description": "End-to-end AI SaaS and automation systems.",
+    "icon": "Sparkles",
+    "tiers": [
+      {
+        "name": "Free",
+        "price": "$0",
+        "features": ["Consultation", "Roadmap"],
+        "highlighted": false
+      },
+      {
+        "name": "Pro",
+        "price": "$999",
+        "features": ["MVP Build", "Deployment", "Support"],
+        "highlighted": true
+      },
+      {
+        "name": "Custom",
+        "price": "Contact",
+        "features": ["Enterprise Features", "Custom Stack"],
+        "highlighted": false
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Mobile App Development",
+    "description": "Cross-platform Android and iOS apps with modern UI.",
+    "icon": "Smartphone",
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "$499",
+        "features": ["Single Platform", "Core Screens", "Play Store Prep"],
+        "highlighted": false
+      },
+      {
+        "name": "Growth",
+        "price": "$1,499",
+        "features": ["Android + iOS", "Analytics", "Push Notifications"],
+        "highlighted": true
+      },
+      {
+        "name": "Scale",
+        "price": "Contact",
+        "features": ["Custom Backend", "Admin Dashboard", "Ongoing Support"],
+        "highlighted": false
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Web & SaaS Development",
+    "description": "High-performance marketing sites and full SaaS platforms.",
+    "icon": "Globe",
+    "tiers": [
+      {
+        "name": "Landing",
+        "price": "$399",
+        "features": ["Marketing Site", "SEO Setup", "Contact Form"],
+        "highlighted": false
+      },
+      {
+        "name": "SaaS",
+        "price": "$2,499",
+        "features": ["Auth", "Dashboard", "Payments", "Deployment"],
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Contact",
+        "features": ["Multi-tenant", "SSO", "SLA Support"],
+        "highlighted": false
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "AI Automation & Integrations",
+    "description": "Workflow automation connecting your tools with AI agents.",
+    "icon": "Workflow",
+    "tiers": [
+      {
+        "name": "Audit",
+        "price": "$0",
+        "features": ["Process Review", "Automation Map"],
+        "highlighted": false
+      },
+      {
+        "name": "Automate",
+        "price": "$799",
+        "features": ["3 Workflows", "API Integrations", "Monitoring"],
+        "highlighted": true
+      },
+      {
+        "name": "Full Stack",
+        "price": "Contact",
+        "features": ["Custom Agents", "Private Models", "Team Training"],
+        "highlighted": false
+      }
+    ]
+  }
+]

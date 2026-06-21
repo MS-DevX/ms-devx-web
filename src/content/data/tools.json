@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "slug": "ai-resume-builder",
+    "name": "AI Resume Builder",
+    "description": "Generate modern resumes with live preview.",
+    "category": "AI",
+    "icon": "FileText",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "slug": "ai-cover-letter",
+    "name": "AI Cover Letter Writer",
+    "description": "Create tailored cover letters instantly.",
+    "category": "AI",
+    "icon": "PenSquare",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "slug": "pdf-toolkit",
+    "name": "PDF Toolkit",
+    "description": "Merge, compress, split, and convert PDFs.",
+    "category": "PDF",
+    "icon": "FileArchive",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "slug": "prayer-times",
+    "name": "Prayer Times Calculator",
+    "description": "Accurate salah times with location-based scheduling.",
+    "category": "Islamic",
+    "icon": "Moon",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "5",
+    "slug": "hifz-tracker",
+    "name": "Hifz Tracker",
+    "description": "Track Quran memorization progress across all 114 surahs.",
+    "category": "Islamic",
+    "icon": "BookOpen",
+    "status": "coming-soon",
+    "featured": true
+  },
+  {
+    "id": "6",
+    "slug": "business-name-generator",
+    "name": "Business Name Generator",
+    "description": "Generate brandable business names with AI-style suggestions.",
+    "category": "AI",
+    "icon": "Sparkles",
+    "status": "coming-soon",
+    "featured": false
+  },
+  {
+    "id": "7",
+    "slug": "homework-helper",
+    "name": "AI Homework Helper",
+    "description": "Get step-by-step explanations for homework questions.",
+    "category": "Student",
+    "icon": "GraduationCap",
+    "status": "coming-soon",
+    "featured": false
+  },
+  {
+    "id": "8",
+    "slug": "unit-converter",
+    "name": "Unit Converter",
+    "description": "Convert length, weight, temperature, and speed instantly.",
+    "category": "Utility",
+    "icon": "Ruler",
+    "status": "coming-soon",
+    "featured": false
+  },
+  {
+    "id": "9",
+    "slug": "expense-tracker",
+    "name": "Expense Tracker",
+    "description": "Track daily expenses with categories and running totals.",
+    "category": "Productivity",
+    "icon": "Wallet",
+    "status": "coming-soon",
+    "featured": false
+  },
+  {
+    "id": "10",
+    "slug": "calorie-scanner",
+    "name": "Calorie Scanner",
+    "description": "Estimate nutrition from food photos with AI-style analysis.",
+    "category": "AI",
+    "icon": "Apple",
+    "status": "coming-soon",
+    "featured": true
+  }
+]

@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ================================
+   MS DevX DESIGN SYSTEM (v1)
+   Tailwind v4 Theme Tokens
+================================ */
+
+
+/*  Light Mode Codes  ================================ */
+:root {
+  --background: #ffffff;
+  --foreground: #1F2328;
+  --card: #F6F8FA;
+  --card-foreground: #1F2328;
+  --popover: #EAEEF2;
+  --popover-foreground: #1F2328;
+  --primary: #0969DA;
+  --primary-foreground: #ffffff;
+  --secondary: #EAEEF2;
+  --secondary-foreground: #1F2328;
+  --muted: #F6F8FA;
+  --muted-foreground: #656D76;
+  --accent: #DBEAFE;
+  --accent-foreground: #0969DA;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #D0D7DE;
+  --input: #D0D7DE;
+  --ring: #0969DA;
+}
+
+/*  Dark Mode Codes  ================================ */
+.dark {
+  --background: #0D1117;
+  --foreground: #E6EDF3;
+  --card: #161B22;
+  --card-foreground: #E6EDF3;
+  --popover: #1C2433;
+  --popover-foreground: #E6EDF3;
+  --primary: #3B82F6;
+  --primary-foreground: #ffffff;
+  --secondary: #1C2433;
+  --secondary-foreground: #E6EDF3;
+  --muted: #161B22;
+  --muted-foreground: #8B949E;
+  --accent: #1D3461;
+  --accent-foreground: #60A5FA;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  --border: #30363D;
+  --input: #30363D;
+  --ring: #3B82F6;
+}
+
+@theme {
+  --color-navy: #0F1B2D;
+  --color-electric: #4A9EFF;
+  --color-sky: #7BB8FF;
+  --color-teal: #1D9E75;
+  --color-offwhite: #F1EFE8;
+  --color-ink: #0A0A0A;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-popover: var(--popover);
+  --color-ring: var(--ring);
+
+  --gradient-primary: linear-gradient(135deg, var(--color-navy), var(--color-electric));
+  --gradient-accent: linear-gradient(135deg, var(--color-electric), var(--color-sky));
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}
+
+/* Utility helpers */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.glass {
+  @apply backdrop-blur-md bg-background/60 border border-border;
+}
+
+.btn-primary {
+  @apply bg-[var(--color-electric)] text-white px-4 py-2 rounded-lg hover:opacity-90 transition;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-[var(--color-electric)] text-[var(--color-electric)] px-4 py-2 rounded-lg hover:bg-[var(--color-electric)] hover:text-white transition;
+}
