@@ -52,6 +52,24 @@ const staticRoutes: MetadataRoute.Sitemap = [
     priority: 0.85,
   },
   {
+    url: `${siteConfig.siteUrl}/privacy`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  },
+  {
+    url: `${siteConfig.siteUrl}/syncdue-privacy`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  },
+  {
+    url: `${siteConfig.siteUrl}/mc-privacy`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  },
+  {
     url: `${siteConfig.siteUrl}/tools`,
     lastModified: new Date(),
     changeFrequency: "weekly",
