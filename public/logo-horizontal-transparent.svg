@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="xg" x1="48" y1="42" x2="250" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.45" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="devText" x1="450" y1="80" x2="760" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#06B6D4"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="0" fill="transparent"/>
+  <g transform="translate(66,55) scale(.43)">
+    <path d="M129 173 L67 256 L129 339" fill="none" stroke="#06B6D4" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
+    <path d="M383 173 L445 256 L383 339" fill="none" stroke="#7C3AED" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" opacity=".95"/>
+    <path d="M188 132 L256 224 L324 132 H391 L290 256 L391 380 H324 L256 288 L188 380 H121 L222 256 L121 132 H188Z" fill="url(#xg)"/>
+  </g>
+  <text x="315" y="189" font-family="Inter, Space Grotesk, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-4">
+    <tspan fill="#0F172A">MS </tspan><tspan fill="url(#devText)">DevX</tspan>
+  </text>
+</svg>

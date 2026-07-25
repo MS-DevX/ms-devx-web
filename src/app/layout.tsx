@@ -16,16 +16,18 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Build smarter. Ship faster. AI tools, SaaS apps, and automation systems.",
+  description: siteConfig.description,
   applicationName: siteConfig.name,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/apple-icon.png",
+    apple: [
+      { url: "/apple-touch-icon-180x180.png" },
+    ],
   },
   keywords: [
     "MS DevX",
@@ -34,16 +36,16 @@ export const metadata: Metadata = {
     "React",
     "Indie Studio",
     "SaaS",
+    "Apps",
   ],
   authors: [
     {
-      name: "Team MS DevX",
+      name: "MS DevX",
     },
   ],
   openGraph: {
     title: siteConfig.name,
-    description:
-      "AI tools, SaaS apps, and automation systems built for modern developers.",
+    description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",
@@ -63,10 +65,7 @@ export const metadata: Metadata = {
     description: siteConfig.tagline,
     images: ["/opengraph-image"],
   },
-  manifest: "/manifest.json",
-  other: {
-    "msapplication-TileColor": "#000000",
-  },
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
@@ -76,10 +75,13 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
     },
   },
+  other: {
+    "google-adsense-account": "ca-pub-8684958562988579",
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#2563EB",
   width: "device-width",
   initialScale: 1,
 };

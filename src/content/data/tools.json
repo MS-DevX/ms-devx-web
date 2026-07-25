@@ -6,7 +6,7 @@
     "description": "Generate modern resumes with live preview.",
     "category": "AI",
     "icon": "FileText",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true
   },
   {
@@ -16,7 +16,7 @@
     "description": "Create tailored cover letters instantly.",
     "category": "AI",
     "icon": "PenSquare",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true
   },
   {
@@ -26,7 +26,7 @@
     "description": "Merge, compress, split, and convert PDFs.",
     "category": "PDF",
     "icon": "FileArchive",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true
   },
   {
@@ -36,7 +36,7 @@
     "description": "Accurate salah times with location-based scheduling.",
     "category": "Islamic",
     "icon": "Moon",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true
   },
   {
@@ -46,7 +46,7 @@
     "description": "Track Quran memorization progress across all 114 surahs.",
     "category": "Islamic",
     "icon": "BookOpen",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true
   },
   {
@@ -56,7 +56,7 @@
     "description": "Generate brandable business names with AI-style suggestions.",
     "category": "AI",
     "icon": "Sparkles",
-    "status": "coming-soon",
+    "status": "live",
     "featured": false
   },
   {
@@ -66,7 +66,7 @@
     "description": "Get step-by-step explanations for homework questions.",
     "category": "Student",
     "icon": "GraduationCap",
-    "status": "coming-soon",
+    "status": "live",
     "featured": false
   },
   {
@@ -76,7 +76,7 @@
     "description": "Convert length, weight, temperature, and speed instantly.",
     "category": "Utility",
     "icon": "Ruler",
-    "status": "coming-soon",
+    "status": "live",
     "featured": false
   },
   {
@@ -86,7 +86,7 @@
     "description": "Track daily expenses with categories and running totals.",
     "category": "Productivity",
     "icon": "Wallet",
-    "status": "coming-soon",
+    "status": "live",
     "featured": false
   },
   {
@@ -96,7 +96,658 @@
     "description": "Estimate nutrition from food photos with AI-style analysis.",
     "category": "AI",
     "icon": "Apple",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true
+  },
+  {
+    "id": "11",
+    "slug": "age-calculator",
+    "name": "Age Calculator",
+    "description": "Find your exact age in years, months, days, and more.",
+    "category": "Date & Time",
+    "icon": "🧮",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "12",
+    "slug": "how-old-am-i-in-seconds",
+    "name": "Age in Seconds",
+    "description": "Calculate your age in seconds, milliseconds, minutes, hours with live ticking counter.",
+    "category": "Date & Time",
+    "icon": "⏱️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "13",
+    "slug": "what-day-was-i-born",
+    "name": "What Day Was I Born?",
+    "description": "Discover the weekday, zodiac sign, and fun facts about your birth date.",
+    "category": "Date & Time",
+    "icon": "📆",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "14",
+    "slug": "life-age-fun-units",
+    "name": "Life Age in Fun Units",
+    "description": "Calculate your age in breaths, heartbeats, laughs, dog years, and other entertaining statistics.",
+    "category": "Date & Time",
+    "icon": "✨",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "15",
+    "slug": "date-calculator",
+    "name": "Date Calculator",
+    "description": "Find the number of days between any two dates.",
+    "category": "Date & Time",
+    "icon": "📅",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "16",
+    "slug": "time-calculator",
+    "name": "Time Calculator",
+    "description": "Calculate time differences and durations instantly.",
+    "category": "Date & Time",
+    "icon": "⏱",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "17",
+    "slug": "work-hours-calculator",
+    "name": "Work Hours Calculator",
+    "description": "Track shifts, breaks, and total working hours easily.",
+    "category": "Date & Time",
+    "icon": "💼",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "18",
+    "slug": "emi-calculator",
+    "name": "EMI Calculator",
+    "description": "Calculate loan EMI, total interest, and payment schedule.",
+    "category": "Finance",
+    "icon": "🏦",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "19",
+    "slug": "percentage-calculator",
+    "name": "Percentage Calculator",
+    "description": "Quick percentage calculations for discounts and tips.",
+    "category": "Math",
+    "icon": "📊",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "20",
+    "slug": "sleep-calculator",
+    "name": "Sleep Calculator",
+    "description": "Find your best bedtime or wake-up time for full cycles.",
+    "category": "Health",
+    "icon": "😴",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "21",
+    "slug": "word-counter",
+    "name": "Word Counter",
+    "description": "Count words, characters, sentences, paragraphs, and lines.",
+    "category": "Text",
+    "icon": "📝",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "22",
+    "slug": "capitalize",
+    "name": "Capitalize Text",
+    "description": "Automatically capitalize the first word in every sentence.",
+    "category": "Text",
+    "icon": "🔠",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "23",
+    "slug": "edit-counter",
+    "name": "Edit Counter",
+    "description": "Track how many words you added or removed during editing.",
+    "category": "Text",
+    "icon": "✂️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "24",
+    "slug": "lorem-ipsum-generator",
+    "name": "Lorem Ipsum Generator",
+    "description": "Generate placeholder text for mockups and layouts.",
+    "category": "Text",
+    "icon": "📄",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "25",
+    "slug": "case-converter",
+    "name": "Case Converter",
+    "description": "Switch between lowercase, UPPERCASE, Title Case, and more.",
+    "category": "Text",
+    "icon": "🔤",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "26",
+    "slug": "reading-time-estimator",
+    "name": "Reading Time Estimator",
+    "description": "Find out how long it takes to read any text.",
+    "category": "Text",
+    "icon": "⏳",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "27",
+    "slug": "password-strength-checker",
+    "name": "Password Strength Checker",
+    "description": "Check password security with a visual strength meter.",
+    "category": "Security",
+    "icon": "🔒",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "28",
+    "slug": "password-generator",
+    "name": "Password Generator",
+    "description": "Generate secure random passwords instantly.",
+    "category": "Security",
+    "icon": "🔐",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "29",
+    "slug": "tip-calculator",
+    "name": "Tip Calculator",
+    "description": "Split bills and calculate tips with ease.",
+    "category": "Finance",
+    "icon": "💵",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "30",
+    "slug": "savings-goal-tracker",
+    "name": "Savings Goal Tracker",
+    "description": "Track progress toward your savings targets.",
+    "category": "Finance",
+    "icon": "🎯",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "31",
+    "slug": "loan-comparison-calculator",
+    "name": "Loan Comparison",
+    "description": "Compare loan offers side by side.",
+    "category": "Finance",
+    "icon": "📉",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "32",
+    "slug": "text-diff-checker",
+    "name": "Text Diff Checker",
+    "description": "Compare two texts and see exactly what changed.",
+    "category": "Text",
+    "icon": "📋",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "33",
+    "slug": "budget-percentage-calculator",
+    "name": "Budget Percentage",
+    "description": "See how your budget is distributed.",
+    "category": "Finance",
+    "icon": "💰",
+    "status": "live",
+    "featured": true
+  },
+
+  {
+    "id": "35",
+    "slug": "random-decision-maker",
+    "name": "Random Decision Maker",
+    "description": "Let fate decide with Yes/No, Coin Flip, Custom Options, and Spinning Wheel picker.",
+    "category": "Math",
+    "icon": "🎲",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "36",
+    "slug": "name-compatibility-calculator",
+    "name": "Name Compatibility Calculator",
+    "description": "Find your love compatibility score using numerology and name analysis.",
+    "category": "Math",
+    "icon": "💕",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "37",
+    "slug": "time-zone-converter",
+    "name": "Time Zone Converter",
+    "description": "Convert time between cities and time zones worldwide with live world clocks.",
+    "category": "Date & Time",
+    "icon": "🌍",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "38",
+    "slug": "countdown-timer",
+    "name": "Countdown Timer",
+    "description": "Create live countdowns for future events with animated display and fullscreen mode.",
+    "category": "Date & Time",
+    "icon": "⏰",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "39",
+    "slug": "date-difference",
+    "name": "Date Difference Calculator",
+    "description": "Calculate the exact difference between two dates with business days and time support.",
+    "category": "Date & Time",
+    "icon": "📊",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "40",
+    "slug": "json-formatter",
+    "name": "JSON Formatter & Validator",
+    "description": "Format, validate, beautify, and minify JSON instantly with syntax highlighting.",
+    "category": "Text",
+    "icon": "📝",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "41",
+    "slug": "image-to-pdf",
+    "name": "Image to PDF",
+    "description": "Convert your images to PDF with custom page size, orientation, and margin settings.",
+    "category": "Utility",
+    "icon": "📄",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "42",
+    "slug": "merge-pdf",
+    "name": "Merge PDF",
+    "description": "Combine multiple PDF files into a single document in your browser.",
+    "category": "Utility",
+    "icon": "🔗",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "43",
+    "slug": "split-pdf",
+    "name": "Split PDF",
+    "description": "Extract specific pages or page ranges from a PDF file in your browser.",
+    "category": "Utility",
+    "icon": "✂️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "44",
+    "slug": "pdf-to-images",
+    "name": "PDF to Images",
+    "description": "Convert each page of a PDF file into PNG or JPEG images directly in your browser.",
+    "category": "Utility",
+    "icon": "🖼️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "45",
+    "slug": "pdf-to-text",
+    "name": "PDF to Text",
+    "description": "Extract all text content from a PDF file and copy or download as a text file.",
+    "category": "Utility",
+    "icon": "📝",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "46",
+    "slug": "image-compressor",
+    "name": "Image Compressor",
+    "description": "Compress images to 100KB, 200KB, or 500KB with the best possible quality.",
+    "category": "Utility",
+    "icon": "🗜️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "47",
+    "slug": "pdf-compressor",
+    "name": "PDF Compressor",
+    "description": "Compress PDF files to 100KB, 200KB, or 500KB with optimal quality.",
+    "category": "Utility",
+    "icon": "🗜️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "48",
+    "slug": "qr-code-generator",
+    "name": "QR Code Generator",
+    "description": "Generate downloadable QR codes for URLs, text, email, phone, WiFi, and SMS instantly.",
+    "category": "Utility",
+    "icon": "📱",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "49",
+    "slug": "typing-speed-test",
+    "name": "Typing Speed Test",
+    "description": "Measure your typing speed (WPM) and accuracy with real-time highlighting and difficulty levels.",
+    "category": "Utility",
+    "icon": "⌨️",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "50",
+    "slug": "character-counter",
+    "name": "Character Counter",
+    "description": "Count characters, words, sentences, paragraphs, reading time, and more with live updates.",
+    "category": "Text",
+    "icon": "📊",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "51",
+    "slug": "exam-countdown-timer",
+    "name": "Exam Countdown Timer",
+    "description": "Create countdowns for exams and important events with local storage persistence.",
+    "category": "Utility",
+    "icon": "📚",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "52",
+    "slug": "study-timer",
+    "name": "Study Timer",
+    "description": "Track study sessions and focus time with stopwatch mode, session history, and daily stats.",
+    "category": "Utility",
+    "icon": "⏱️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "53",
+    "slug": "pomodoro-timer",
+    "name": "Pomodoro Timer",
+    "description": "Boost productivity with focus sessions, short/long breaks, customizable durations, and progress rings.",
+    "category": "Utility",
+    "icon": "🍅",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "54",
+    "slug": "cgpa-to-percentage",
+    "name": "CGPA to Percentage",
+    "description": "Convert CGPA to percentage using customizable formulas.",
+    "category": "Academic",
+    "icon": "🎓",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "55",
+    "slug": "gpa-calculator",
+    "name": "GPA Calculator",
+    "description": "Calculate semester GPA and cumulative CGPA. Supports multiple grading scales.",
+    "category": "Academic",
+    "icon": "📊",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "56",
+    "slug": "water-intake-calculator",
+    "name": "Water Intake Calculator",
+    "description": "Calculate your daily water intake based on weight, activity level, and climate.",
+    "category": "Health",
+    "icon": "💧",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "57",
+    "slug": "tdee-calculator",
+    "name": "TDEE Calculator (Calorie)",
+    "description": "Calculate your TDEE, BMR, and target calories for weight loss, maintenance, or muscle gain.",
+    "category": "Health",
+    "icon": "🔥",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "58",
+    "slug": "body-fat-calculator",
+    "name": "Body Fat Calculator",
+    "description": "Calculate your body fat percentage using the US Navy circumference method.",
+    "category": "Health",
+    "icon": "🧍",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "59",
+    "slug": "ideal-weight-calculator",
+    "name": "Ideal Weight Calculator",
+    "description": "Calculate your ideal body weight using four clinical formulas.",
+    "category": "Health",
+    "icon": "⚖️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "60",
+    "slug": "protein-intake-calculator",
+    "name": "Protein Intake Calculator",
+    "description": "Calculate your daily protein needs based on weight, goal, and activity level.",
+    "category": "Health",
+    "icon": "🥩",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "61",
+    "slug": "steps-to-calories-calculator",
+    "name": "Steps to Calories Calculator",
+    "description": "Calculate calories burned from walking based on steps, weight, and speed.",
+    "category": "Health",
+    "icon": "🚶",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "62",
+    "slug": "calories-burned-calculator",
+    "name": "Calories Burned Calculator",
+    "description": "Calculate calories burned during any exercise using MET values.",
+    "category": "Health",
+    "icon": "🏃",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "63",
+    "slug": "heart-rate-zone-calculator",
+    "name": "Heart Rate Zone Calculator",
+    "description": "Calculate your heart rate training zones using the Karvonen formula.",
+    "category": "Health",
+    "icon": "❤️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "64",
+    "slug": "bmr-calculator",
+    "name": "BMR Calculator",
+    "description": "Calculate your BMR using the Mifflin-St Jeor equation.",
+    "category": "Health",
+    "icon": "🔥",
+    "status": "live",
+    "featured": true
+  },
+  {
+    "id": "65",
+    "slug": "macro-calculator",
+    "name": "Macro Calculator",
+    "description": "Calculate your daily macronutrient targets based on weight, goal, and activity.",
+    "category": "Health",
+    "icon": "🥗",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "66",
+    "slug": "intermittent-fasting-timer",
+    "name": "Intermittent Fasting Timer",
+    "description": "Track your intermittent fasting with a live countdown timer.",
+    "category": "Health",
+    "icon": "⏳",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "67",
+    "slug": "running-pace-calculator",
+    "name": "Running Pace Calculator",
+    "description": "Calculate your running pace and estimate race finish times.",
+    "category": "Health",
+    "icon": "🏃",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "68",
+    "slug": "caffeine-calculator",
+    "name": "Caffeine Intake Calculator",
+    "description": "Calculate your daily caffeine intake from coffee, tea, energy drinks, and soda.",
+    "category": "Health",
+    "icon": "☕",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "69",
+    "slug": "one-rep-max-calculator",
+    "name": "One Rep Max Calculator",
+    "description": "Estimate your one rep max using Epley, Brzycki, Lombardi, and Lander formulas.",
+    "category": "Health",
+    "icon": "💪",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "70",
+    "slug": "vo2-max-estimator",
+    "name": "VO₂ Max Estimator",
+    "description": "Estimate your VO₂ max using resting heart rate, Cooper test, or 1.5-mile run.",
+    "category": "Health",
+    "icon": "❤️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "71",
+    "slug": "push-up-calorie-calculator",
+    "name": "Push-Up Calorie Calculator",
+    "description": "Calculate calories burned doing push-ups based on reps, weight, and intensity.",
+    "category": "Health",
+    "icon": "💪",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "72",
+    "slug": "pregnancy-due-date-calculator",
+    "name": "Pregnancy Due Date Calculator",
+    "description": "Calculate your pregnancy due date using LMP, conception date, or ultrasound.",
+    "category": "Health",
+    "icon": "👶",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "73",
+    "slug": "sugar-intake-calculator",
+    "name": "Sugar Intake Calculator",
+    "description": "Calculate your daily sugar intake from drinks, snacks, and added sugar.",
+    "category": "Health",
+    "icon": "🍬",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "74",
+    "slug": "screen-time-break-reminder",
+    "name": "Screen Time Break Reminder",
+    "description": "Get reminded to take screen breaks with customizable intervals, sounds, and fullscreen overlay.",
+    "category": "Utility",
+    "icon": "👁️",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "75",
+    "slug": "breathing-exercise-tool",
+    "name": "Breathing Exercise Tool",
+    "description": "Practice guided breathing exercises with an animated circle. Box, 4-7-8, and Relax modes.",
+    "category": "Health",
+    "icon": "🧘",
+    "status": "live",
+    "featured": false
+  },
+  {
+    "id": "76",
+    "slug": "meditation-timer",
+    "name": "Meditation Timer",
+    "description": "Meditation timer with ambient sounds, interval bells, and fullscreen mode.",
+    "category": "Health",
+    "icon": "🕉️",
+    "status": "live",
+    "featured": false
   }
 ]

@@ -2,31 +2,29 @@ import type { NavItem, SocialLink, ToolCategory } from "./types";
 
 export const siteConfig = {
   name: "MS DevX",
-  tagline: "Build smarter. Ship faster.",
+  tagline: "Build smarter apps. Ship faster.",
   description:
-    "MS DevX is an indie AI studio building modern tools, apps, and developer-first solutions.",
+    "MS DevX is an indie studio building AI-powered tools and apps for modern users.",
   url: "https://msdevx.com",
   siteUrl: "https://msdevx.com",
-  toolsUrl: "https://tools.marth.systems",
+  toolsUrl: "https://tools.msdevx.com",
   contactEmail: "marthsystems@gmail.com",
   author: "Shahzad Marth",
   colors: {
-    navy: "#0F1B2D",
-    electric: "#4A9EFF",
-    sky: "#7BB8FF",
-    teal: "#1D9E75",
-    offwhite: "#F1EFE8",
-    ink: "#0A0A0A",
+    cyan: "#06B6D4",
+    blue: "#2563EB",
+    purple: "#7C3AED",
+    slate: "#0F172A",
+    white: "#FFFFFF",
   },
 };
 
 export const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "Apps", href: "/apps" },
+  { label: "Tools", href: "/tools" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
-  { label: "Hire", href: "/hire" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -55,6 +53,14 @@ export const toolCategories: ToolCategory[] = [
   "Student",
   "PDF",
   "Utility",
+  "Health",
+  "Finance",
+  "Date & Time",
+  "Math",
+  "Text",
+  "Security",
+  "Converter",
+  "Academic",
 ];
 
 export const appCategories = [
@@ -64,5 +70,6 @@ export const appCategories = [
   "Student",
   "PDF",
   "AI",
+  "Utility",
 ];
 

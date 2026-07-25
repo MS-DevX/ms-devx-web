@@ -14,28 +14,28 @@ export interface FeaturedAppsProps {
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   return (
-    <div className="rounded-xl border border-border bg-background p-5 transition hover:shadow-lg">
-      <div className="flex items-start justify-between gap-3">
+    <div className="rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1">
+      <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="font-semibold text-foreground">{app.name}</h3>
-          <p className="mt-1 text-xs text-muted-foreground">{app.description}</p>
+          <h3 className="text-xl font-bold text-foreground">{app.name}</h3>
+          <p className="mt-2 text-sm text-muted-foreground">{app.description}</p>
         </div>
 
-        <Badge className="shrink-0" variant="outline">
+        <Badge className="shrink-0 bg-gradient-primary text-white border-0">
           {app.badge}
         </Badge>
       </div>
 
-      <p className="mt-3 text-xs text-electric">{app.category}</p>
+      <p className="mt-4 text-sm text-blue font-semibold">{app.category}</p>
 
-      <div className="mt-5 flex gap-2">
+      <div className="mt-6 flex gap-3">
         {app.playStoreUrl && (
           <Link
             href={app.playStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="sm">Play Store</Button>
+            <Button size="sm" className="btn-primary">Play Store</Button>
           </Link>
         )}
 
@@ -48,7 +48,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             <Button
               size="sm"
               variant="outline"
-              className="border-electric text-electric hover:bg-electric hover:text-white"
+              className="btn-secondary"
             >
               Web
             </Button>
@@ -63,23 +63,23 @@ export default function FeaturedApps({ className }: FeaturedAppsProps) {
   const featuredApps = apps.filter((app) => app.featured);
 
   return (
-    <section className={cn("py-20", className)}>
+    <section className={cn("py-24", className)}>
       <div className="container">
         <SectionHeader
           title="Featured Apps"
-          subtitle="A collection of high-impact tools and applications built by MS DevX."
+          subtitle="A collection of AI-powered tools and applications built by MS DevX."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
           {featuredApps.map((app) => (
             <AppCard key={app.id} app={app} />
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center">
           <Link
             href="/apps"
-            className="text-sm font-medium text-electric hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2"
+            className="text-base font-semibold text-blue hover:text-purple transition-colors"
           >
             Browse all apps →
           </Link>

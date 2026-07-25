@@ -42,9 +42,9 @@ const relatedLinks = [
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata({
-    title: "MS DevX Tools Hub — Free AI Utilities",
+    title: "MS DevX Tools Hub — Free Online Tools & Calculators",
     description:
-      "AI-powered utilities for developers, students, and creators — resume builder, PDF toolkit, prayer times, homework helper, and more.",
+      "75+ free online tools and calculators for health, finance, date & time, text, security, math, and more. All processing happens in your browser — private and instant.",
     path: "/",
     host: "tools",
     keywords: [...pageKeywords.tools],

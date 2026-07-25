@@ -24,6 +24,8 @@ export interface Tool {
   icon: string;
   status: ToolStatus;
   featured: boolean;
+  keywords?: string[];
+  howToUse?: string[];
 }
 
 export interface ServiceTier {
@@ -91,7 +93,18 @@ export type ToolCategory =
   | "Islamic"
   | "Student"
   | "PDF"
-  | "Utility";
+  | "Utility"
+  | "Health"
+  | "Finance"
+  | "Date & Time"
+  | "Math"
+  | "Text"
+  | "Security"
+  | "Converter"
+  | "Academic"
+  | "Fitness"
+  | "Calculators"
+  | "Generators";
 
 export interface ContactFormValues {
   name: string;

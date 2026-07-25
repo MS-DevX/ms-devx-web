@@ -55,6 +55,28 @@
       ],
       "destination": "https://msdevx.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "tools.msdevx.com"
+        }
+      ],
+      "destination": "https://msdevx.com/tools",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "tools.msdevx.com"
+        }
+      ],
+      "destination": "https://msdevx.com/tools/$1",
+      "permanent": true
     }
   ]
 }

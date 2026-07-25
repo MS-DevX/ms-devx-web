@@ -8,33 +8,37 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import apps from "@/content/data/apps.json";
 import { appCategories } from "@/lib/constants";
-import type { ToolStatus } from "@/lib/types";
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   const isComingSoon = app.status === "coming-soon";
 
   return (
-    <div className="rounded-xl border border-border bg-background p-5 transition hover:shadow-lg">
+    <div className="rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1">
       <div className="mb-2 flex flex-wrap items-center gap-2">
-        <h3 className="font-semibold text-foreground">{app.name}</h3>
+        <h3 className="text-xl font-bold text-foreground">{app.name}</h3>
         {isComingSoon && (
           <Badge variant="outline" className="border-border bg-muted/50 text-muted-foreground">
             Coming Soon
+          </Badge>
+        )}
+        {!isComingSoon && (
+          <Badge className="shrink-0 bg-gradient-primary text-white border-0">
+            {app.badge}
           </Badge>
         )}
       </div>
 
       <p className="mt-2 text-sm text-muted-foreground">{app.description}</p>
 
-      <p className="mt-2 text-xs text-electric">{app.category}</p>
+      <p className="mt-4 text-sm text-blue font-semibold">{app.category}</p>
 
-      <div className="mt-4 flex gap-2">
+      <div className="mt-6 flex gap-3">
         {app.playStoreUrl && (
           <Button
             size="sm"
             asChild={!isComingSoon}
             disabled={isComingSoon}
-            variant={isComingSoon ? "outline" : "default"}
+            className={isComingSoon ? "" : "btn-primary"}
           >
             {isComingSoon ? (
               "Play Store"
@@ -52,6 +56,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             variant="outline"
             asChild={!isComingSoon}
             disabled={isComingSoon}
+            className={isComingSoon ? "" : "btn-secondary"}
           >
             {isComingSoon ? (
               "Web"

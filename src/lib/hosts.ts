@@ -2,11 +2,11 @@
 export const HOSTS = [
   "msdevx.com",
   "www.msdevx.com",
-  "tools.marth.systems",
+  "tools.msdevx.com",
   "localhost",
 ] as const;
 
-export const TOOLS_HOSTNAME = "tools.marth.systems";
+export const TOOLS_HOSTNAME = "tools.msdevx.com";
 
 export const MAIN_HOSTNAMES = [
   "msdevx.com",
@@ -36,7 +36,7 @@ export function isToolsHost(host: string): boolean {
   return (
     hostname === TOOLS_HOSTNAME ||
     hostname === "tools.localhost" ||
-    hostname.endsWith(".tools.marth.systems")
+    hostname.endsWith(".tools.msdevx.com")
   );
 }
 

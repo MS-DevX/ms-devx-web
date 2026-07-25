@@ -56,7 +56,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
     <>
       <SectionHeader
         title="MS DevX Tools Hub"
-        subtitle="AI-powered utilities for developers, students, and creators"
+        subtitle="75+ free online tools and calculators — all private, all instant"
         className="mb-10"
       />
 
