@@ -29,27 +29,20 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
       <p className="mt-4 text-sm text-blue font-semibold">{app.category}</p>
 
       <div className="mt-6 flex gap-3">
+        {app.landingPage && (
+          <Link href={app.landingPage}>
+            <Button size="sm">Learn More</Button>
+          </Link>
+        )}
+
         {app.playStoreUrl && (
           <Link
             href={app.playStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="sm">Play Store</Button>
-          </Link>
-        )}
-
-        {app.webUrl && (
-          <Link
-            href={app.webUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button
-              size="sm"
-              variant="outline"
-            >
-              Web
+            <Button size="sm" variant="outline">
+              Play Store
             </Button>
           </Link>
         )}
