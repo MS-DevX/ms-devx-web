@@ -10,3 +10,5 @@ dist/
 build/
 *.log
 .DS_Store
+lh-*.json
+src/components/tools.zip
