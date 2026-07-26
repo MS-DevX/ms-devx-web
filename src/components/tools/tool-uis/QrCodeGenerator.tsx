@@ -71,7 +71,7 @@ export default function QrCodeGenerator() {
   const [copied, setCopied] = useState(false);
   const [_generating, setGenerating] = useState(false);
 
-  const [url, setUrl] = useState("https://tools.msdevx.com");
+  const [url, setUrl] = useState("https://msdevx.com/tools");
   const [text, setText] = useState("Hello from MS DevX Tools QR Code Generator!");
   const [emailTo, setEmailTo] = useState("");
   const [emailSubject, setEmailSubject] = useState("");

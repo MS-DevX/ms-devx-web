@@ -6,7 +6,8 @@ export const HOSTS = [
   "localhost",
 ] as const;
 
-export const TOOLS_HOSTNAME = "tools.msdevx.com";
+export const TOOLS_HOSTNAME = "msdevx.com";
+export const LEGACY_TOOLS_HOSTNAME = "tools.msdevx.com";
 
 export const MAIN_HOSTNAMES = [
   "msdevx.com",
@@ -34,7 +35,7 @@ export function isToolsHost(host: string): boolean {
   const hostname = normalizeHost(host);
 
   return (
-    hostname === TOOLS_HOSTNAME ||
+    hostname === LEGACY_TOOLS_HOSTNAME ||
     hostname === "tools.localhost" ||
     hostname.endsWith(".tools.msdevx.com")
   );
