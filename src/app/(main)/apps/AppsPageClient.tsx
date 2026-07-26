@@ -40,7 +40,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
 
       <div className="mt-6 flex gap-3">
         {hasLandingPage && (
-          <Button size="sm" asChild className="btn-primary">
+          <Button size="sm" asChild>
             <Link href={app.landingPage!}>
               {isComingSoon ? "Learn More" : "Learn More"}
             </Link>
@@ -52,7 +52,6 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             size="sm"
             asChild={!isComingSoon}
             disabled={isComingSoon}
-            className={isComingSoon ? "" : "btn-primary"}
           >
             {isComingSoon ? (
               "Play Store"
@@ -70,7 +69,6 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             variant="outline"
             asChild={!isComingSoon}
             disabled={isComingSoon}
-            className={isComingSoon ? "" : "btn-secondary"}
           >
             {isComingSoon ? (
               "Web"

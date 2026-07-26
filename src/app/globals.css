@@ -106,11 +106,3 @@ body {
 @utility bg-gradient-primary {
   background: linear-gradient(135deg, var(--color-cyan), var(--color-blue), var(--color-purple));
 }
-
-@utility btn-primary {
-  @apply bg-gradient-primary text-white px-6 py-3 rounded-lg hover:opacity-90 transition-all shadow-lg;
-}
-
-@utility btn-secondary {
-  @apply bg-transparent border-2 border-blue text-blue px-6 py-3 rounded-lg hover:bg-blue hover:text-white transition-all;
-}

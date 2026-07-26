@@ -66,13 +66,13 @@ export default function HeroSection({ className }: HeroSectionProps) {
           className="mt-12 flex flex-col md:flex-row justify-center gap-4"
         >
           <Link href="/apps">
-            <Button size="lg" className="btn-primary text-lg px-8 py-4">
+            <Button size="lg" className="text-lg px-8 py-4">
               Explore Apps
             </Button>
           </Link>
 
           <Link href="/tools">
-            <Button size="lg" variant="outline" className="btn-secondary text-lg px-8 py-4">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-4">
               Try Tools
             </Button>
           </Link>

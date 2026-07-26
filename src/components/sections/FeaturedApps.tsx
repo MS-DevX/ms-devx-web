@@ -35,7 +35,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="sm" className="btn-primary">Play Store</Button>
+            <Button size="sm">Play Store</Button>
           </Link>
         )}
 
@@ -48,7 +48,6 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             <Button
               size="sm"
               variant="outline"
-              className="btn-secondary"
             >
               Web
             </Button>
