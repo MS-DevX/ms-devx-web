@@ -2,7 +2,7 @@ import type { NavItem, SocialLink, ToolCategory } from "./types";
 
 export const siteConfig = {
   name: "MS DevX",
-  tagline: "Build smarter apps. Ship faster.",
+  tagline: "Build Smarter. Ship Faster.",
   description:
     "MS DevX is an indie studio building AI-powered tools and apps for modern users.",
   url: "https://msdevx.com",
