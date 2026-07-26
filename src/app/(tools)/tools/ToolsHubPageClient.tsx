@@ -103,6 +103,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
                 <Button
                   asChild
                   size="sm"
+                  variant="gradient"
                 >
                   <Link href={`/tools/${tool.slug}`}>Open Tool</Link>
                 </Button>

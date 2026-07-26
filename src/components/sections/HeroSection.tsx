@@ -66,7 +66,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
           className="mt-12 flex flex-col md:flex-row justify-center gap-4"
         >
           <Link href="/apps">
-            <Button size="lg" className="text-lg px-8 py-4">
+            <Button size="lg" variant="gradient" className="text-lg px-8 py-4">
               Explore Apps
             </Button>
           </Link>

@@ -31,7 +31,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
       <div className="mt-6 flex gap-3">
         {app.landingPage && (
           <Link href={app.landingPage}>
-            <Button size="sm">Learn More</Button>
+            <Button size="sm" variant="gradient">Learn More</Button>
           </Link>
         )}
 
