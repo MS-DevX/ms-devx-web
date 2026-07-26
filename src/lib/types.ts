@@ -26,6 +26,7 @@ export interface Tool {
   icon: string;
   status: ToolStatus;
   featured: boolean;
+  order?: number;
   keywords?: string[];
   howToUse?: string[];
 }

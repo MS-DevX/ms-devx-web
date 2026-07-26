@@ -370,6 +370,11 @@ export default function NameCompatibilityCalculator() {
 
   return (
     <div>
+      {/* Disclaimer Banner */}
+      <div className="mb-6 rounded-lg border border-amber-500/20 bg-amber-500/10 p-3 text-center text-xs text-amber-700 dark:text-amber-300">
+        ✨ <strong>Disclaimer:</strong> This tool uses fun name numerology and character algorithms for <em>entertainment & novelty purposes only</em>. It is not a scientific or psychological calculation!
+      </div>
+
       {/* Heart Animation Container */}
       <div className="text-center mb-8">
         <div

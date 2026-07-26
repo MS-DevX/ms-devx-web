@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 
 import "@/app/globals.css";
 
+import AdSenseScript from "@/components/seo/AdSenseScript";
 import BackToTop from "@/components/shared/BackToTop";
 import { siteConfig } from "@/lib/constants";
 import type { RootLayoutProps } from "@/lib/types";
@@ -104,6 +105,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           {children}
           <BackToTop />
+          <AdSenseScript />
         </ThemeProvider>
       </body>
     </html>

@@ -31,17 +31,21 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
   const filteredTools = useMemo(() => {
     const query = debouncedSearch.toLowerCase().trim();
 
-    return tools.filter((tool) => {
-      const matchesCategory =
-        activeCategory === "All" || tool.category === activeCategory;
+    // Order is based on general public search demand patterns across tool categories.
+    // Can be updated with real analytics data once traffic history is established.
+    return tools
+      .filter((tool) => {
+        const matchesCategory =
+          activeCategory === "All" || tool.category === activeCategory;
 
-      const matchesSearch =
-        query.length === 0 ||
-        tool.name.toLowerCase().includes(query) ||
-        tool.description.toLowerCase().includes(query);
+        const matchesSearch =
+          query.length === 0 ||
+          tool.name.toLowerCase().includes(query) ||
+          tool.description.toLowerCase().includes(query);
 
-      return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch;
+      })
+      .sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
   }, [tools, activeCategory, debouncedSearch]);
 
   return (

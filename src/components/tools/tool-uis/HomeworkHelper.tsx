@@ -1,10 +1,9 @@
 "use client";
 
-import { FileText, Loader2, Sparkles, Upload } from "lucide-react";
+import { Clock, FileText, Sparkles, Upload } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
@@ -15,8 +14,6 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import type { ToolUiProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
-
-type InputMode = "text" | "file";
 
 const SUBJECTS = [
   "Mathematics",
@@ -29,142 +26,112 @@ const SUBJECTS = [
 ] as const;
 
 export default function HomeworkHelper({ className }: ToolUiProps) {
-  const [inputMode, setInputMode] = useState<InputMode>("text");
+  const [inputMode, setInputMode] = useState<"text" | "file">("text");
   const [question, setQuestion] = useState("");
   const [fileName, setFileName] = useState("");
   const [subject, setSubject] = useState<string>(SUBJECTS[0]);
-  const [answer, setAnswer] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [showOutput, setShowOutput] = useState(false);
-
-  const handleGenerate = () => {
-    if (inputMode === "text" && !question.trim()) return;
-    if (inputMode === "file" && !fileName) return;
-
-    setLoading(true);
-    setShowOutput(false);
-
-    setTimeout(() => {
-      const prompt =
-        inputMode === "text"
-          ? question.trim()
-          : `Content extracted from "${fileName}"`;
-
-      setAnswer(
-        `Subject: ${subject}\n\n` +
-          `Question:\n${prompt}\n\n` +
-          `Explanation:\n` +
-          `Step 1 — Identify what the problem is asking. Break the prompt into known values, unknowns, and constraints.\n\n` +
-          `Step 2 — Apply the core ${subject.toLowerCase()} concept. ` +
-          `For this mock response, we simulate identifying the correct formula or reasoning path based on keywords in your input.\n\n` +
-          `Step 3 — Solve and verify. Work through the logic systematically, then check whether the answer satisfies the original question.\n\n` +
-          `Suggested approach: Start by restating the problem in your own words, list given data, show each transformation, and box your final answer with units where applicable.`
-      );
-      setShowOutput(true);
-      setLoading(false);
-    }, 1600);
-  };
 
   return (
-    <div className={cn("space-y-6", className)}>
-      <div className="flex flex-wrap gap-2">
-        <Button
-          type="button"
-          variant={inputMode === "text" ? "default" : "outline"}
-          size="sm"
-          onClick={() => setInputMode("text")}
-          className={inputMode === "text" ? "bg-electric text-white" : ""}
-        >
-          <FileText />
-          Text input
-        </Button>
-        <Button
-          type="button"
-          variant={inputMode === "file" ? "default" : "outline"}
-          size="sm"
-          onClick={() => setInputMode("file")}
-          className={inputMode === "file" ? "bg-electric text-white" : ""}
-        >
-          <Upload />
-          File upload
-        </Button>
-      </div>
+    <div className={cn("grid gap-8 lg:grid-cols-2", className)}>
+      <div className="space-y-6">
+        <div className="flex flex-wrap gap-2">
+          <Button
+            type="button"
+            variant={inputMode === "text" ? "default" : "outline"}
+            size="sm"
+            onClick={() => setInputMode("text")}
+            className={inputMode === "text" ? "bg-blue-600 text-white dark:bg-electric dark:text-slate-950 font-semibold" : ""}
+          >
+            <FileText className="size-4" />
+            Text input
+          </Button>
+          <Button
+            type="button"
+            variant={inputMode === "file" ? "default" : "outline"}
+            size="sm"
+            onClick={() => setInputMode("file")}
+            className={inputMode === "file" ? "bg-blue-600 text-white dark:bg-electric dark:text-slate-950 font-semibold" : ""}
+          >
+            <Upload className="size-4" />
+            File upload
+          </Button>
+        </div>
 
-      <div className="space-y-2">
-        <label htmlFor="homework-subject" className="text-sm font-medium">
-          Subject
-        </label>
-        <Select value={subject} onValueChange={setSubject}>
-          <SelectTrigger id="homework-subject" className="w-full sm:w-64">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            {SUBJECTS.map((item) => (
-              <SelectItem key={item} value={item}>
-                {item}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-
-      {inputMode === "text" ? (
         <div className="space-y-2">
-          <label htmlFor="homework-question" className="text-sm font-medium">
-            Your question
+          <label htmlFor="homework-subject" className="text-xs font-medium text-muted-foreground">
+            Subject
           </label>
-          <Textarea
-            id="homework-question"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            rows={5}
-            placeholder="Paste your homework question here..."
-          />
+          <Select value={subject} onValueChange={setSubject}>
+            <SelectTrigger id="homework-subject" className="w-full text-xs">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {SUBJECTS.map((item) => (
+                <SelectItem key={item} value={item} className="text-xs">
+                  {item}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
-      ) : (
-        <div className="rounded-lg border border-dashed border-border bg-muted/20 p-6 text-center">
-          <Upload className="mx-auto mb-2 size-8 text-electric" />
-          <p className="text-sm font-medium">Upload homework file</p>
-          <Input
-            type="file"
-            accept="image/*,.pdf,.txt"
-            className="mx-auto mt-4 max-w-xs"
-            onChange={(e) => setFileName(e.target.files?.[0]?.name ?? "")}
-          />
-          {fileName && (
-            <p className="mt-2 text-xs text-electric">{fileName}</p>
-          )}
-        </div>
-      )}
 
-      <Button
-        onClick={handleGenerate}
-        disabled={loading}
-        className="bg-electric text-white hover:bg-electric/90"
-      >
-        {loading ? (
-          <>
-            <Loader2 className="animate-spin" />
-            Generating explanation...
-          </>
+        {inputMode === "text" ? (
+          <div className="space-y-2">
+            <label htmlFor="homework-question" className="text-xs font-medium text-muted-foreground">
+              Your question
+            </label>
+            <Textarea
+              id="homework-question"
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              rows={5}
+              placeholder="Type or paste your question here to preview the prompt layout..."
+              className="text-sm"
+            />
+          </div>
         ) : (
-          <>
-            <Sparkles />
-            Generate answer
-          </>
+          <div className="rounded-xl border border-dashed border-border bg-card p-6 text-center">
+            <Upload className="mx-auto mb-2 size-8 text-blue-700 dark:text-electric" />
+            <p className="text-sm font-semibold">Upload homework file</p>
+            <input
+              type="file"
+              accept="image/*,.pdf,.txt"
+              className="mx-auto mt-4 block text-xs text-muted-foreground file:mr-3 file:rounded-md file:border-0 file:bg-muted file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-foreground hover:file:bg-muted/80"
+              onChange={(e) => setFileName(e.target.files?.[0]?.name ?? "")}
+            />
+            {fileName && (
+              <p className="mt-2 text-xs font-medium text-blue-700 dark:text-electric">{fileName}</p>
+            )}
+          </div>
         )}
-      </Button>
 
-      {showOutput && answer && (
-        <div className="animate-in fade-in rounded-lg border border-border bg-muted/30 p-4 duration-300">
-          <p className="mb-2 text-xs font-medium uppercase tracking-wide text-electric">
-            AI explanation
-          </p>
-          <pre className="whitespace-pre-wrap font-sans text-sm leading-relaxed text-foreground">
-            {answer}
-          </pre>
+        <Button
+          type="button"
+          disabled
+          className="w-full bg-muted text-muted-foreground cursor-not-allowed"
+        >
+          <Sparkles className="size-4" />
+          Generate Explanation — Coming Soon
+        </Button>
+      </div>
+
+      <div className="flex flex-col items-center justify-center rounded-xl border border-border bg-card p-6 text-center min-h-[300px]">
+        <div className="rounded-full bg-amber-500/10 p-3 text-amber-600 dark:text-amber-400 mb-3 border border-amber-500/20">
+          <Clock className="size-6" />
         </div>
-      )}
+
+        <span className="mb-2 rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-700 dark:text-amber-300 border border-amber-500/20">
+          Under Development
+        </span>
+
+        <h3 className="text-base font-bold text-foreground mb-1">
+          AI Problem Solver Coming Soon
+        </h3>
+
+        <p className="max-w-sm text-xs text-muted-foreground leading-relaxed">
+          Real step-by-step problem solving requires a secure server-side LLM API integration. Rather than returning generic simulated text, this tool is being updated to connect directly to an AI API service.
+        </p>
+      </div>
     </div>
   );
 }

@@ -104,12 +104,12 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
           {loading ? (
             <>
               <Loader2 className="animate-spin" />
-              Generating AI resume...
+              Formatting resume...
             </>
           ) : (
             <>
-              <Sparkles />
-              Generate AI resume
+              <Sparkles className="size-4" />
+              Generate Resume Summary
             </>
           )}
         </Button>

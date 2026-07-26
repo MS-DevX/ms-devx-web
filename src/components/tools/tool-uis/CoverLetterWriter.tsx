@@ -99,7 +99,7 @@ export default function CoverLetterWriter({ className }: ToolUiProps) {
           </p>
         ) : (
           <p className="text-sm text-muted-foreground">
-            Your AI-generated cover letter will appear here after you click
+            Your generated cover letter will appear here after you click
             generate.
           </p>
         )}
