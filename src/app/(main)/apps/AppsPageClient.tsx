@@ -11,12 +11,18 @@ import { appCategories } from "@/lib/constants";
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   const isComingSoon = app.status === "coming-soon";
+  const hasLandingPage = Boolean(app.landingPage);
 
   return (
     <div className="rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1">
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <h3 className="text-xl font-bold text-foreground">{app.name}</h3>
-        {isComingSoon && (
+        {isComingSoon && app.closedTesting && (
+          <Badge variant="outline" className="border-border bg-muted/50 text-muted-foreground">
+            Closed Testing
+          </Badge>
+        )}
+        {isComingSoon && !app.closedTesting && (
           <Badge variant="outline" className="border-border bg-muted/50 text-muted-foreground">
             Coming Soon
           </Badge>
@@ -33,7 +39,15 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
       <p className="mt-4 text-sm text-blue font-semibold">{app.category}</p>
 
       <div className="mt-6 flex gap-3">
-        {app.playStoreUrl && (
+        {hasLandingPage && (
+          <Button size="sm" asChild className="btn-primary">
+            <Link href={app.landingPage!}>
+              {isComingSoon ? "Learn More" : "Learn More"}
+            </Link>
+          </Button>
+        )}
+
+        {!hasLandingPage && app.playStoreUrl && (
           <Button
             size="sm"
             asChild={!isComingSoon}
@@ -50,7 +64,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
           </Button>
         )}
 
-        {app.webUrl && (
+        {!hasLandingPage && app.webUrl && (
           <Button
             size="sm"
             variant="outline"

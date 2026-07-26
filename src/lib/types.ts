@@ -13,6 +13,8 @@ export interface App {
   badge: BadgeType;
   status?: ToolStatus;
   featured: boolean;
+  landingPage?: string;
+  closedTesting?: boolean;
 }
 
 export interface Tool {

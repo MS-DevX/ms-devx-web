@@ -2,14 +2,15 @@
   {
     "id": "1",
     "name": "Unit Converter",
-    "description": "Convert length, weight, temperature, speed, and more instantly.",
+    "description": "Convert length, weight, temperature, speed, and more instantly. 300+ units across 53 categories, 170+ currencies — fully offline.",
     "category": "Utility",
     "iconUrl": "/apps/unit-converter.png",
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.msdevx.unitconverter&pcampaignid=web_share",
     "webUrl": null,
-    "badge": "Live",
+    "badge": "Free",
     "status": "live",
-    "featured": true
+    "featured": true,
+    "landingPage": "/apps/unit-converter"
   },
   {
     "id": "2",
@@ -17,23 +18,25 @@
     "description": "AI-powered smart note-taking and summarization workspace.",
     "category": "Productivity",
     "iconUrl": "/apps/devx-notes.png",
-    "playStoreUrl": "https://play.google.com",
-    "webUrl": "https://msdevx.com",
+    "playStoreUrl": null,
+    "webUrl": null,
     "badge": "New",
-    "status": "live",
-    "featured": true
+    "status": "coming-soon",
+    "featured": false
   },
   {
     "id": "3",
-    "name": "Quran Companion Lite",
-    "description": "Minimal Islamic study companion with bookmarks and tafsir.",
+    "name": "Muslim Companion",
+    "description": "Offline Islamic companion — Quran reader, prayer times, Qibla compass, Hadith explorer, and Tasbeeh counter.",
     "category": "Islamic",
-    "iconUrl": "/apps/quran-lite.png",
-    "playStoreUrl": "https://play.google.com",
-    "webUrl": "https://msdevx.com",
+    "iconUrl": "/apps/muslim-companion.png",
+    "playStoreUrl": null,
+    "webUrl": null,
     "badge": "Free",
-    "status": "live",
-    "featured": true
+    "status": "coming-soon",
+    "featured": true,
+    "landingPage": "/apps/muslim-companion",
+    "closedTesting": true
   },
   {
     "id": "4",
@@ -41,11 +44,11 @@
     "description": "Fast PDF merge, split, and compress toolkit.",
     "category": "PDF",
     "iconUrl": "/apps/pdf-swift.png",
-    "playStoreUrl": "https://play.google.com",
-    "webUrl": "https://msdevx.com",
+    "playStoreUrl": null,
+    "webUrl": null,
     "badge": "Paid",
-    "status": "live",
-    "featured": true
+    "status": "coming-soon",
+    "featured": false
   },
   {
     "id": "5",
@@ -53,10 +56,10 @@
     "description": "Student planner with AI-powered homework tracking.",
     "category": "Student",
     "iconUrl": "/apps/studysprint.png",
-    "playStoreUrl": "https://play.google.com",
-    "webUrl": "https://msdevx.com",
+    "playStoreUrl": null,
+    "webUrl": null,
     "badge": "AdMob",
-    "status": "live",
+    "status": "coming-soon",
     "featured": false
   },
   {
@@ -65,11 +68,11 @@
     "description": "Startup idea validation and launch planning assistant.",
     "category": "AI",
     "iconUrl": "/apps/launchpilot.png",
-    "playStoreUrl": "https://play.google.com",
-    "webUrl": "https://msdevx.com",
+    "playStoreUrl": null,
+    "webUrl": null,
     "badge": "New",
-    "status": "live",
-    "featured": true
+    "status": "coming-soon",
+    "featured": false
   },
   {
     "id": "7",
@@ -77,10 +80,10 @@
     "description": "Simple cross-device productivity and habit tracker.",
     "category": "Productivity",
     "iconUrl": "/apps/taskflow.png",
-    "playStoreUrl": "https://play.google.com",
-    "webUrl": "https://msdevx.com",
+    "playStoreUrl": null,
+    "webUrl": null,
     "badge": "Free",
-    "status": "live",
+    "status": "coming-soon",
     "featured": false
   }
 ]
