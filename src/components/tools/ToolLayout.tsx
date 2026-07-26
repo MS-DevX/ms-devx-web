@@ -48,12 +48,6 @@ const howItWorksSteps: {
   },
 ];
 
-const relatedToolPlaceholders = [
-  "Related Tool 1",
-  "Related Tool 2",
-  "Related Tool 3",
-] as const;
-
 function getStatusBadgeClass(status: ToolStatus): string {
   if (status === "live") {
     return "border-teal/40 bg-teal/10 text-teal";
@@ -148,35 +142,6 @@ export default function ToolLayout({
               </Card>
             );
           })}
-        </div>
-      </section>
-
-      <section aria-labelledby="related-tools-heading">
-        <h2
-          id="related-tools-heading"
-          className="mb-6 text-xl font-semibold text-foreground"
-        >
-          Related Tools
-        </h2>
-
-        <div className="grid gap-4 sm:grid-cols-3">
-          {relatedToolPlaceholders.map((label) => (
-            <Card
-              key={label}
-              className="border-border bg-background py-5 transition hover:-translate-y-0.5 hover:border-electric/30 hover:shadow-md"
-            >
-              <CardHeader>
-                <CardTitle className="text-base text-foreground">
-                  {label}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm">
-                  Discover another utility from the MS DevX Tools Hub.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </section>
     </div>
