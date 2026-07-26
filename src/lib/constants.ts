@@ -59,7 +59,6 @@ export const toolCategories: ToolCategory[] = [
   "Math",
   "Text",
   "Security",
-  "Converter",
   "Academic",
 ];
 

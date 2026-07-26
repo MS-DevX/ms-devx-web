@@ -100,11 +100,7 @@ export type ToolCategory =
   | "Math"
   | "Text"
   | "Security"
-  | "Converter"
-  | "Academic"
-  | "Fitness"
-  | "Calculators"
-  | "Generators";
+  | "Academic";
 
 export interface ContactFormValues {
   name: string;
