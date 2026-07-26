@@ -14,18 +14,6 @@
   },
   {
     "id": "2",
-    "name": "DevX Notes AI",
-    "description": "AI-powered smart note-taking and summarization workspace.",
-    "category": "Productivity",
-    "iconUrl": "/apps/devx-notes.png",
-    "playStoreUrl": null,
-    "webUrl": null,
-    "badge": "New",
-    "status": "coming-soon",
-    "featured": false
-  },
-  {
-    "id": "3",
     "name": "Muslim Companion",
     "description": "Offline Islamic companion — Quran reader, prayer times, Qibla compass, Hadith explorer, and Tasbeeh counter.",
     "category": "Islamic",
@@ -39,11 +27,36 @@
     "closedTesting": true
   },
   {
+    "id": "3",
+    "name": "RCM Academy",
+    "description": "Master Revenue Cycle Management — interactive lessons, quizzes, simulations, and career paths for healthcare billing and coding professionals.",
+    "category": "Education",
+    "iconUrl": "/apps/placeholder.svg",
+    "playStoreUrl": null,
+    "webUrl": null,
+    "badge": "New",
+    "status": "coming-soon",
+    "featured": true,
+    "landingPage": "/rcm-academy"
+  },
+  {
     "id": "4",
+    "name": "DevX Notes AI",
+    "description": "AI-powered smart note-taking and summarization workspace.",
+    "category": "Productivity",
+    "iconUrl": "/apps/placeholder.svg",
+    "playStoreUrl": null,
+    "webUrl": null,
+    "badge": "New",
+    "status": "coming-soon",
+    "featured": false
+  },
+  {
+    "id": "5",
     "name": "PDF Swift",
     "description": "Fast PDF merge, split, and compress toolkit.",
     "category": "PDF",
-    "iconUrl": "/apps/pdf-swift.png",
+    "iconUrl": "/apps/placeholder.svg",
     "playStoreUrl": null,
     "webUrl": null,
     "badge": "Paid",
@@ -51,11 +64,11 @@
     "featured": false
   },
   {
-    "id": "5",
+    "id": "6",
     "name": "StudySprint",
     "description": "Student planner with AI-powered homework tracking.",
     "category": "Student",
-    "iconUrl": "/apps/studysprint.png",
+    "iconUrl": "/apps/placeholder.svg",
     "playStoreUrl": null,
     "webUrl": null,
     "badge": "AdMob",
@@ -63,40 +76,27 @@
     "featured": false
   },
   {
-    "id": "6",
+    "id": "7",
     "name": "LaunchPilot AI",
     "description": "Startup idea validation and launch planning assistant.",
     "category": "AI",
-    "iconUrl": "/apps/launchpilot.png",
+    "iconUrl": "/apps/placeholder.svg",
     "playStoreUrl": null,
     "webUrl": null,
     "badge": "New",
-    "status": "coming-soon",
-    "featured": false
-  },
-  {
-    "id": "7",
-    "name": "TaskFlow Mini",
-    "description": "Simple cross-device productivity and habit tracker.",
-    "category": "Productivity",
-    "iconUrl": "/apps/taskflow.png",
-    "playStoreUrl": null,
-    "webUrl": null,
-    "badge": "Free",
     "status": "coming-soon",
     "featured": false
   },
   {
     "id": "8",
-    "name": "RCM Academy",
-    "description": "Master Revenue Cycle Management — interactive lessons, quizzes, simulations, and career paths for healthcare billing and coding professionals.",
-    "category": "Education",
-    "iconUrl": "/apps/rcm-academy.png",
+    "name": "TaskFlow Mini",
+    "description": "Simple cross-device productivity and habit tracker.",
+    "category": "Productivity",
+    "iconUrl": "/apps/placeholder.svg",
     "playStoreUrl": null,
     "webUrl": null,
-    "badge": "New",
+    "badge": "Free",
     "status": "coming-soon",
-    "featured": true,
-    "landingPage": "/rcm-academy"
+    "featured": false
   }
 ]

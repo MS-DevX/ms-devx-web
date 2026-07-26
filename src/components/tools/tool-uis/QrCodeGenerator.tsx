@@ -85,20 +85,6 @@ export default function QrCodeGenerator() {
   const [smsBody, setSmsBody] = useState("");
 
   const _canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const checkDarkMode = () => {
-      setIsDarkMode(document.documentElement.classList.contains("dark"));
-    };
-    checkDarkMode();
-    const observer = new MutationObserver(checkDarkMode);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-    return () => observer.disconnect();
-  }, []);
 
   const getQRContent = useCallback(() => {
     switch (activeType) {
@@ -244,13 +230,6 @@ export default function QrCodeGenerator() {
     }
   };
 
-  const bgCard = "bg-[var(--bg-card)]";
-  const bgSoft = "bg-[var(--bg-soft)]";
-  const borderColor = "border-[var(--border)]";
-  const textColor = "text-[var(--text)]";
-  const textMuted = "text-[var(--text-muted)]";
-  const brandColor = "text-primary";
-  const bgBrandLight = "bg-primary/10";
 
   const renderTypeForm = () => {
     switch (activeType) {
@@ -258,11 +237,11 @@ export default function QrCodeGenerator() {
         return (
           <div className="space-y-4">
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Website URL
               </label>
-              <div className={`flex items-center rounded-lg border ${borderColor} overflow-hidden`}>
-                <span className={`px-4 py-3 ${bgSoft} ${textMuted} text-sm border-r ${borderColor}`}>
+              <div className="flex items-center rounded-lg border border-border overflow-hidden">
+                <span className="px-4 py-3 bg-muted text-muted-foreground text-sm border-r border-border">
                   https://
                 </span>
                 <input
@@ -277,10 +256,7 @@ export default function QrCodeGenerator() {
                     }
                   }}
                   placeholder="example.com or https://example.com"
-                  className={`flex-1 px-4 py-3 text-sm focus:outline-none ${textColor}`}
-                  style={{
-                    backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                  }}
+                  className="flex-1 px-4 py-3 text-sm focus:outline-none text-foreground bg-background"
                 />
               </div>
             </div>
@@ -291,7 +267,7 @@ export default function QrCodeGenerator() {
         return (
           <div className="space-y-4">
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Your Text
               </label>
               <textarea
@@ -299,10 +275,7 @@ export default function QrCodeGenerator() {
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setText(e.target.value)}
                 placeholder="Enter your text here..."
                 rows={4}
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
               />
             </div>
           </div>
@@ -312,7 +285,7 @@ export default function QrCodeGenerator() {
         return (
           <div className="space-y-4">
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 To (Email Address) *
               </label>
               <input
@@ -320,14 +293,11 @@ export default function QrCodeGenerator() {
                 value={emailTo}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmailTo(e.target.value)}
                 placeholder="recipient@example.com"
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Subject
               </label>
               <input
@@ -335,14 +305,11 @@ export default function QrCodeGenerator() {
                 value={emailSubject}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmailSubject(e.target.value)}
                 placeholder="Email subject"
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Body
               </label>
               <textarea
@@ -350,10 +317,7 @@ export default function QrCodeGenerator() {
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setEmailBody(e.target.value)}
                 placeholder="Email body content..."
                 rows={3}
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
               />
             </div>
           </div>
@@ -363,7 +327,7 @@ export default function QrCodeGenerator() {
         return (
           <div className="space-y-4">
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Phone Number *
               </label>
               <input
@@ -371,12 +335,9 @@ export default function QrCodeGenerator() {
                 value={phoneNumber}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhoneNumber(e.target.value)}
                 placeholder="+1 555 123 4567 or 555-123-4567"
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
-              <p className={`mt-2 text-xs ${textMuted}`}>
+              <p className="mt-2 text-xs text-muted-foreground">
                 Include country code for international numbers (e.g., +44, +91)
               </p>
             </div>
@@ -387,7 +348,7 @@ export default function QrCodeGenerator() {
         return (
           <div className="space-y-4">
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Network Name (SSID) *
               </label>
               <input
@@ -395,14 +356,11 @@ export default function QrCodeGenerator() {
                 value={wifiSsid}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setWifiSsid(e.target.value)}
                 placeholder="MyHomeWiFi"
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Password
               </label>
               <input
@@ -410,24 +368,18 @@ export default function QrCodeGenerator() {
                 value={wifiPassword}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setWifiPassword(e.target.value)}
                 placeholder="WiFi password (leave empty for open networks)"
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className={`block text-sm font-medium ${textColor} mb-2`}>
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Encryption
                 </label>
                 <select
                   value={wifiEncryption}
                   onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setWifiEncryption(e.target.value)}
-                  className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                  style={{
-                    backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                  }}
+                  className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
                   {WIFI_ENCRYPTION.map((enc) => (
                     <option key={enc.value} value={enc.value}>
@@ -444,7 +396,7 @@ export default function QrCodeGenerator() {
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setWifiHidden(e.target.checked)}
                     className="w-4 h-4 text-primary rounded border-gray-300 focus:ring-primary"
                   />
-                  <span className={`text-sm ${textColor}`}>Hidden Network</span>
+                  <span className="text-sm text-foreground">Hidden Network</span>
                 </label>
               </div>
             </div>
@@ -455,7 +407,7 @@ export default function QrCodeGenerator() {
         return (
           <div className="space-y-4">
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Phone Number *
               </label>
               <input
@@ -463,14 +415,11 @@ export default function QrCodeGenerator() {
                 value={smsNumber}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSmsNumber(e.target.value)}
                 placeholder="+1 555 123 4567"
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
               />
             </div>
             <div>
-              <label className={`block text-sm font-medium ${textColor} mb-2`}>
+              <label className="block text-sm font-medium text-foreground mb-2">
                 Message
               </label>
               <textarea
@@ -478,10 +427,7 @@ export default function QrCodeGenerator() {
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setSmsBody(e.target.value)}
                 placeholder="Your SMS message..."
                 rows={3}
-                className={`w-full px-4 py-3 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none ${textColor}`}
-                style={{
-                  backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                }}
+                className="w-full px-4 py-3 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none"
               />
             </div>
           </div>
@@ -496,20 +442,15 @@ export default function QrCodeGenerator() {
     <div className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
         <div className="lg:col-span-3 space-y-6">
-          <div className={`${bgCard} rounded-2xl border ${borderColor} shadow-card overflow-hidden`}>
-            <div
-              className={`px-5 py-3 border-b ${borderColor}`}
-              style={{
-                backgroundColor: isDarkMode ? "#252526" : "#f3f4f6",
-              }}
-            >
+          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden">
+            <div className="px-5 py-3 border-b border-border bg-muted/60">
               <div className="flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-                <span className={`ml-2 text-sm font-medium ${textMuted}`}>
+                <span className="ml-2 text-sm font-medium text-muted-foreground">
                   qr-generator.json
                 </span>
               </div>
@@ -517,7 +458,7 @@ export default function QrCodeGenerator() {
 
             <div className="p-5">
               <div className="mb-5">
-                <h3 className={`text-sm font-semibold ${textColor} mb-3`}>
+                <h3 className="text-sm font-semibold text-foreground mb-3">
                   Select QR Code Type
                 </h3>
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
@@ -527,8 +468,8 @@ export default function QrCodeGenerator() {
                       onClick={() => setActiveType(type.id)}
                       className={`flex flex-col items-center gap-1.5 p-3 rounded-xl text-sm font-medium transition-all border-2 ${
                         activeType === type.id
-                          ? `border-primary ${bgBrandLight} ${brandColor} shadow-sm`
-                          : `border-[var(--border)] ${bgCard} ${textColor} hover:border-primary/50`
+                          ? "border-primary bg-primary/10 text-primary shadow-sm"
+                          : "border-border bg-card text-foreground hover:border-primary/50"
                       }`}
                     >
                       <span className="text-xl">{type.icon}</span>
@@ -538,16 +479,16 @@ export default function QrCodeGenerator() {
                 </div>
               </div>
 
-              <div className={`p-4 rounded-xl ${bgSoft}`}>
+              <div className="p-4 rounded-xl bg-muted/30">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-lg">
                     {QR_TYPES.find((t) => t.id === activeType)?.icon}
                   </span>
                   <div>
-                    <h4 className={`text-sm font-semibold ${textColor}`}>
+                    <h4 className="text-sm font-semibold text-foreground">
                       {QR_TYPES.find((t) => t.id === activeType)?.name}
                     </h4>
-                    <p className={`text-xs ${textMuted}`}>
+                    <p className="text-xs text-muted-foreground">
                       {QR_TYPES.find((t) => t.id === activeType)?.description}
                     </p>
                   </div>
@@ -557,22 +498,19 @@ export default function QrCodeGenerator() {
             </div>
           </div>
 
-          <div className={`${bgCard} rounded-2xl border ${borderColor} shadow-card p-5`}>
-            <h3 className={`text-sm font-semibold ${textColor} mb-4`}>
+          <div className="bg-card rounded-2xl border border-border shadow-card p-5">
+            <h3 className="text-sm font-semibold text-foreground mb-4">
               ⚙️ QR Code Settings
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className={`block text-sm font-medium ${textColor} mb-2`}>
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Size
                 </label>
                 <select
                   value={size}
                   onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSize(parseInt(e.target.value))}
-                  className={`w-full px-4 py-2.5 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                  style={{
-                    backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                  }}
+                  className="w-full px-4 py-2.5 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
                   {SIZE_PRESETS.map((p) => (
                     <option key={p.value} value={p.value}>
@@ -582,16 +520,13 @@ export default function QrCodeGenerator() {
                 </select>
               </div>
               <div>
-                <label className={`block text-sm font-medium ${textColor} mb-2`}>
+                <label className="block text-sm font-medium text-foreground mb-2">
                   Error Correction
                 </label>
                 <select
                   value={errorLevel}
                   onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setErrorLevel(e.target.value as "L" | "M" | "Q" | "H")}
-                  className={`w-full px-4 py-2.5 text-sm rounded-lg border ${borderColor} focus:outline-none focus:ring-2 focus:ring-primary/30 ${textColor}`}
-                  style={{
-                    backgroundColor: isDarkMode ? "#1e1e1e" : "#ffffff",
-                  }}
+                  className="w-full px-4 py-2.5 text-sm rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30"
                 >
                   <option value="L">Low (7%)</option>
                   <option value="M">Medium (15%) - Recommended</option>
@@ -604,25 +539,20 @@ export default function QrCodeGenerator() {
         </div>
 
         <div className="lg:col-span-2 space-y-6">
-          <div className={`${bgCard} rounded-2xl border ${borderColor} shadow-card overflow-hidden`}>
-            <div
-              className={`px-5 py-3 border-b ${borderColor} flex items-center justify-between`}
-              style={{
-                backgroundColor: isDarkMode ? "#252526" : "#f3f4f6",
-              }}
-            >
-              <span className={`text-sm font-medium ${textMuted}`}>
+          <div className="bg-card rounded-2xl border border-border shadow-card overflow-hidden">
+            <div className="px-5 py-3 border-b border-border bg-muted/60 flex items-center justify-between">
+              <span className="text-sm font-medium text-muted-foreground">
                 Preview
               </span>
-              <span className={`text-xs ${textMuted}`}>
+              <span className="text-xs text-muted-foreground">
                 {size}px
               </span>
             </div>
 
             <div className="p-6">
               <div
-                className={`flex items-center justify-center p-6 rounded-xl mb-4 ${
-                  qrDataUrl ? bgSoft : bgSoft + " opacity-50"
+                className={`flex items-center justify-center p-6 rounded-xl mb-4 bg-muted/30 ${
+                  qrDataUrl ? "" : "opacity-50"
                 }`}
                 style={{ minHeight: "280px" }}
               >
@@ -635,23 +565,15 @@ export default function QrCodeGenerator() {
                       width={Math.min(size, 250)}
                       height={Math.min(size, 250)}
                     />
-                    <div
-                      className={`absolute -top-2 -left-2 w-4 h-4 border-l-2 border-t-2 ${brandColor}`}
-                    ></div>
-                    <div
-                      className={`absolute -top-2 -right-2 w-4 h-4 border-r-2 border-t-2 ${brandColor}`}
-                    ></div>
-                    <div
-                      className={`absolute -bottom-2 -left-2 w-4 h-4 border-l-2 border-b-2 ${brandColor}`}
-                    ></div>
-                    <div
-                      className={`absolute -bottom-2 -right-2 w-4 h-4 border-r-2 border-b-2 ${brandColor}`}
-                    ></div>
+                    <div className="absolute -top-2 -left-2 w-4 h-4 border-l-2 border-t-2 border-primary"></div>
+                    <div className="absolute -top-2 -right-2 w-4 h-4 border-r-2 border-t-2 border-primary"></div>
+                    <div className="absolute -bottom-2 -left-2 w-4 h-4 border-l-2 border-b-2 border-primary"></div>
+                    <div className="absolute -bottom-2 -right-2 w-4 h-4 border-r-2 border-b-2 border-primary"></div>
                   </div>
                 ) : (
                   <div className="text-center">
                     <div className="text-5xl mb-3">📱</div>
-                    <p className={`text-sm ${textMuted}`}>
+                    <p className="text-sm text-muted-foreground">
                       {getQRContent()
                         ? "Generating QR code..."
                         : "Enter content to generate QR code"}
@@ -664,13 +586,13 @@ export default function QrCodeGenerator() {
                 <div className="space-y-3">
                   <button
                     onClick={handleDownload}
-                    className={`w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white rounded-xl transition-all bg-primary hover:opacity-90 shadow-lg shadow-primary/20`}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-white rounded-xl transition-all bg-primary hover:opacity-90 shadow-lg shadow-primary/20"
                   >
                     ⬇️ Download PNG
                   </button>
                   <button
                     onClick={handleCopyImage}
-                    className={`w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium rounded-xl transition-all border-2 ${borderColor} ${textColor} hover:border-primary hover:${bgBrandLight}`}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium rounded-xl transition-all border-2 border-border text-foreground hover:border-primary hover:bg-primary/10"
                   >
                     {copied ? "✓ Copied!" : "📋 Copy Image"}
                   </button>
@@ -679,25 +601,25 @@ export default function QrCodeGenerator() {
             </div>
           </div>
 
-          <div className={`${bgCard} rounded-2xl border ${borderColor} shadow-card p-5`}>
-            <h3 className={`text-sm font-semibold ${textColor} mb-3`}>
+          <div className="bg-card rounded-2xl border border-border shadow-card p-5">
+            <h3 className="text-sm font-semibold text-foreground mb-3">
               💡 Tips
             </h3>
-            <ul className={`space-y-2 text-sm ${textMuted}`}>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <span className={brandColor}>•</span>
+                <span className="text-primary">•</span>
                 <span>Test your QR code with your phone camera before sharing</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className={brandColor}>•</span>
+                <span className="text-primary">•</span>
                 <span>Higher error correction allows QR code to be scanned even when damaged</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className={brandColor}>•</span>
+                <span className="text-primary">•</span>
                 <span>WiFi QR codes let guests connect without typing passwords</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className={brandColor}>•</span>
+                <span className="text-primary">•</span>
                 <span>URL QR codes automatically add https:// if missing</span>
               </li>
             </ul>

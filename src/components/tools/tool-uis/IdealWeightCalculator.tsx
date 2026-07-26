@@ -295,8 +295,9 @@ export default function IdealWeightCalculator() {
         </button>
       </div>
 
-      <ResultBox show={result !== null}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+      {result && (
+        <ResultBox show={true}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
           {result?.entries.map((entry) => {
             const maxVal = Math.max(...result.entries.map((e) => e.kg), 1);
             const pct = (entry.kg / maxVal) * 100;
@@ -368,6 +369,7 @@ export default function IdealWeightCalculator() {
           </div>
         </div>
       </ResultBox>
+      )}
 
       <section className="mt-10">
         <h2 className="text-lg font-bold text-foreground mb-4">About These Formulas</h2>

@@ -277,8 +277,9 @@ export default function ProteinIntakeCalculator() {
         </button>
       </div>
 
-      <ResultBox show={result !== null}>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      {result && (
+        <ResultBox show={true}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <div className="bg-muted rounded-xl p-4 text-center border border-border">
             <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Daily Target</div>
             <div className="text-2xl font-bold text-foreground">{result?.mid}g</div>
@@ -359,6 +360,7 @@ export default function ProteinIntakeCalculator() {
           ))}
         </div>
       </ResultBox>
+      )}
 
       <section className="mt-10">
         <h2 className="text-lg font-bold text-foreground mb-4">Why Protein Matters</h2>

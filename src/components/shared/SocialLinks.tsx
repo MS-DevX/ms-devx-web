@@ -72,7 +72,7 @@ export default function SocialLinks({ className }: SocialLinksProps) {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={item.name}
+            aria-label={`MS DevX on ${item.name}`}
             className="text-muted-foreground transition hover:text-electric"
           >
             <Icon className="h-5 w-5" />

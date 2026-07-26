@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { PDFDocument } from "pdf-lib";
 
 export default function SplitPdf() {
   const [file, setFile] = useState<File | null>(null);
@@ -16,6 +15,7 @@ export default function SplitPdf() {
 
   const loadPdf = useCallback(async (pdfFile: File) => {
     try {
+      const { PDFDocument } = await import("pdf-lib");
       const arrayBuffer = await pdfFile.arrayBuffer();
       const pdf = await PDFDocument.load(arrayBuffer);
       setFile(pdfFile);
@@ -75,6 +75,7 @@ export default function SplitPdf() {
     if (!file) return;
     setIsSplitting(true);
     try {
+      const { PDFDocument } = await import("pdf-lib");
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await PDFDocument.load(arrayBuffer);
       const indices = pdf.getPageIndices();

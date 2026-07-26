@@ -30,20 +30,22 @@ export default function NavBar({ className }: NavBarProps) {
       )}
     >
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" aria-label="MS DevX Homepage" className="flex items-center gap-3">
           <Image 
-              src="/logo-horizontal-transparent.svg" 
-              alt="MS DevX" 
-              width={220} 
-              height={58} 
-              className="dark:hidden" 
-            />
-            <Image 
-              src="/logo-horizontal-dark-background.svg" 
-              alt="MS DevX" 
-              width={220} 
-              height={58} 
-              className="hidden dark:block"
+            src="/logo-horizontal-transparent.svg" 
+            alt="MS DevX" 
+            width={220} 
+            height={58} 
+            className="dark:hidden"
+            priority 
+          />
+          <Image 
+            src="/logo-horizontal-dark-background.svg" 
+            alt="MS DevX" 
+            width={220} 
+            height={58} 
+            className="hidden dark:block"
+            priority
           />
         </Link>
 
@@ -56,8 +58,8 @@ export default function NavBar({ className }: NavBarProps) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "text-sm font-semibold transition-all hover:text-blue",
-                  isActive ? "text-blue" : "text-muted-foreground"
+                  "text-sm font-semibold transition-all hover:text-blue-700 dark:hover:text-electric",
+                  isActive ? "text-blue-700 dark:text-electric font-bold" : "text-muted-foreground"
                 )}
               >
                 {item.label}
@@ -91,8 +93,8 @@ export default function NavBar({ className }: NavBarProps) {
                       className={cn(
                         "text-lg font-semibold transition-colors",
                         isActive
-                          ? "text-blue"
-                          : "text-muted-foreground"
+                          ? "text-blue-700 dark:text-electric font-bold"
+                          : "text-muted-foreground hover:text-foreground"
                       )}
                     >
                       {item.label}

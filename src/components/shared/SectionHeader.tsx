@@ -5,16 +5,20 @@ export interface SectionHeaderProps {
   subtitle?: string;
   ctaText?: string;
   className?: string;
+  as?: "h1" | "h2" | "h3";
 }
 
 export function SectionHeader({
   title,
   subtitle,
   className,
+  as = "h2",
 }: SectionHeaderProps) {
+  const Heading = as;
+
   return (
     <div className={cn("mx-auto mb-12 max-w-2xl text-center", className)}>
-      <h2 className="text-3xl font-bold text-foreground">{title}</h2>
+      <Heading className="text-3xl font-bold text-foreground">{title}</Heading>
 
       {subtitle && (
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

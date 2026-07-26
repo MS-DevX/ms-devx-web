@@ -17,7 +17,7 @@ export default function RelatedLinks({
   return (
     <aside
       className={cn(
-        "mt-16 rounded-xl border border-border bg-muted/20 p-6",
+        "mt-16 rounded-xl border border-border bg-card p-6",
         className
       )}
       aria-label={title}
@@ -25,8 +25,8 @@ export default function RelatedLinks({
       <h2 className="text-lg font-semibold text-foreground">{title}</h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {links.map((link) => {
-          const className =
-            "block rounded-lg border border-border bg-background p-4 transition hover:border-electric/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric focus-visible:ring-offset-2";
+          const linkClassName =
+            "block rounded-lg border border-border bg-background p-4 transition hover:border-blue/50 dark:hover:border-electric/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
           const isExternal = link.href.startsWith("http");
 
           return (
@@ -34,10 +34,10 @@ export default function RelatedLinks({
               {isExternal ? (
                 <a
                   href={link.href}
-                  className={className}
+                  className={linkClassName}
                   rel="noopener noreferrer"
                 >
-                  <span className="font-medium text-electric">{link.label}</span>
+                  <span className="font-medium text-blue-700 dark:text-electric">{link.label}</span>
                   {link.description && (
                     <p className="mt-1 text-xs text-muted-foreground">
                       {link.description}
@@ -45,8 +45,8 @@ export default function RelatedLinks({
                   )}
                 </a>
               ) : (
-                <Link href={link.href} className={className}>
-                  <span className="font-medium text-electric">{link.label}</span>
+                <Link href={link.href} className={linkClassName}>
+                  <span className="font-medium text-blue-700 dark:text-electric">{link.label}</span>
                   {link.description && (
                     <p className="mt-1 text-xs text-muted-foreground">
                       {link.description}

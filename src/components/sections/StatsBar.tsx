@@ -9,25 +9,41 @@ export interface StatsBarProps {
   className?: string;
 }
 
+/**
+ * Counts up from `target` to `target` — i.e. starts at the final value on
+ * SSR and during initial paint, then only plays the count-up animation on
+ * the client when the element scrolls into view.
+ *
+ * This ensures:
+ *  - Crawlers / no-JS / SSR see the real number immediately (not "0").
+ *  - Users with JS get the animated count-up on first scroll-into-view.
+ *  - `trigger` is only true after hydration, so the animation is always
+ *    a client-only progressive enhancement.
+ */
 function useCounter(target: number, trigger: boolean) {
-  const [count, setCount] = useState(0);
+  // Default to `target` so SSR output and the initial paint both show the
+  // real number. The count-up animation is purely additive on top of that.
+  const [count, setCount] = useState(target);
 
   useEffect(() => {
     if (!trigger) return;
 
-    let start = 0;
+    // Reset to 0 at the start of the animation (client-only).
+    setCount(0);
+
+    let current = 0;
     const duration = 1200;
     const stepTime = 20;
     const steps = duration / stepTime;
     const increment = target / steps;
 
     const interval = setInterval(() => {
-      start += increment;
-      if (start >= target) {
+      current += increment;
+      if (current >= target) {
         setCount(target);
         clearInterval(interval);
       } else {
-        setCount(Math.floor(start));
+        setCount(Math.floor(current));
       }
     }, stepTime);
 

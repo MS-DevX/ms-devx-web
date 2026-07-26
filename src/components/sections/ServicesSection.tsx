@@ -74,7 +74,7 @@ export default function ServicesSection({ className }: ServicesSectionProps) {
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button asChild className="bg-electric text-white hover:bg-electric/90">
-            <Link href="/services">View all services</Link>
+            <Link href="/services" aria-label="Explore all software development services offered by MS DevX">View all services</Link>
           </Button>
           <Button asChild variant="outline">
             <Link href="/hire">Hire MS DevX</Link>

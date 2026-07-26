@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import type { ComponentType } from "react";
 
-const toolModules: Record<string, () => Promise<{ default: ComponentType }>> = {
+const toolModules: Record<string, () => Promise<{ default: ComponentType<any> }>> = {
   // Existing
   "ai-resume-builder": () => import("@/components/tools/tool-uis/ResumeBuilder"),
   "ai-cover-letter": () => import("@/components/tools/tool-uis/CoverLetterWriter"),
@@ -90,15 +90,17 @@ const toolModules: Record<string, () => Promise<{ default: ComponentType }>> = {
   "gpa-calculator": () => import("@/components/tools/tool-uis/GpaCalculator"),
 };
 
-const loading = () => (
-  <div className="flex items-center justify-center py-16">
-    <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
+const ToolSkeletonLoading = () => (
+  <div className="flex min-h-[450px] w-full flex-col items-center justify-center space-y-4 rounded-xl border border-border/50 bg-card/30 p-8 text-center animate-pulse">
+    <div className="h-10 w-10 animate-spin rounded-full border-4 border-electric border-t-transparent" />
+    <div className="h-4 w-48 rounded bg-muted/60" />
+    <div className="h-3 w-64 rounded bg-muted/40" />
   </div>
 );
 
-const toolComponents: Record<string, ComponentType> = {};
+const toolComponents: Record<string, ComponentType<any>> = {};
 for (const [slug, importFn] of Object.entries(toolModules)) {
-  toolComponents[slug] = dynamic(importFn, { ssr: false, loading });
+  toolComponents[slug] = dynamic(importFn, { loading: ToolSkeletonLoading });
 }
 
 interface ToolRendererProps {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { PDFDocument } from "pdf-lib";
+
 
 interface FileItem {
   id: string;
@@ -69,6 +69,7 @@ export default function MergePdf() {
     if (files.length < 2) return;
     setIsMerging(true);
     try {
+      const { PDFDocument } = await import("pdf-lib");
       const mergedPdf = await PDFDocument.create();
 
       for (const f of files) {

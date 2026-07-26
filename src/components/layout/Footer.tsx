@@ -69,7 +69,7 @@ export default function Footer({ className }: FooterProps) {
             <CopyrightText />
           </Suspense>
 
-          <p className="text-electric">{siteConfig.tagline}</p>
+          <p className="text-blue-700 dark:text-electric">{siteConfig.tagline}</p>
         </div>
       </div>
     </footer>

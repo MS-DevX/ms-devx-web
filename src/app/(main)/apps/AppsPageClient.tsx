@@ -4,77 +4,79 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { AppIcon } from "@/components/shared/AppIcon";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import apps from "@/content/data/apps.json";
+import { getAppBadge, getAppButtons } from "@/lib/app-utils";
 import { appCategories } from "@/lib/constants";
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
-  const isComingSoon = app.status === "coming-soon";
-  const hasLandingPage = Boolean(app.landingPage);
+  const badge = getAppBadge(app);
+  const buttons = getAppButtons(app);
 
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1">
-      <div className="mb-2 flex flex-wrap items-center gap-2">
-        <h3 className="text-xl font-bold text-foreground">{app.name}</h3>
-        {isComingSoon && app.closedTesting && (
-          <Badge variant="outline" className="border-border bg-muted/50 text-muted-foreground">
-            Closed Testing
-          </Badge>
-        )}
-        {isComingSoon && !app.closedTesting && (
-          <Badge variant="outline" className="border-border bg-muted/50 text-muted-foreground">
-            Coming Soon
-          </Badge>
-        )}
-        {!isComingSoon && (
+    <div className="flex flex-col h-full rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1">
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <AppIcon src={app.iconUrl} alt={app.name} size={44} />
+          <div>
+            <h2 className="text-xl font-bold text-foreground">{app.name}</h2>
+          </div>
+        </div>
+
+        {badge.variant === "gradient" ? (
           <Badge className="shrink-0 bg-gradient-primary text-white border-0">
-            {app.badge}
+            {badge.label}
+          </Badge>
+        ) : (
+          <Badge variant="outline" className="shrink-0 border-border bg-muted/50 text-muted-foreground">
+            {badge.label}
           </Badge>
         )}
       </div>
 
-      <p className="mt-2 text-sm text-muted-foreground">{app.description}</p>
+      <p className="mt-3 flex-1 text-sm text-muted-foreground">{app.description}</p>
 
-      <p className="mt-4 text-sm text-blue font-semibold">{app.category}</p>
+      <p className="mt-4 text-sm font-semibold text-blue dark:text-electric">{app.category}</p>
 
       <div className="mt-6 flex gap-3">
-        {hasLandingPage && (
+        {buttons.showLearnMore && (
           <Button size="sm" asChild variant="gradient">
-            <Link href={app.landingPage!}>
-              {isComingSoon ? "Learn More" : "Learn More"}
+            <Link href={buttons.landingPage!} aria-label={`Learn more about ${app.name}`}>
+              Learn More
             </Link>
           </Button>
         )}
 
-        {!hasLandingPage && app.playStoreUrl && (
+        {buttons.showPlayStore && (
           <Button
             size="sm"
-            asChild={!isComingSoon}
-            disabled={isComingSoon}
+            asChild={!buttons.playStoreDisabled}
+            disabled={buttons.playStoreDisabled}
             variant="gradient"
           >
-            {isComingSoon ? (
+            {buttons.playStoreDisabled ? (
               "Play Store"
             ) : (
-              <Link href={app.playStoreUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={buttons.playStoreUrl!} target="_blank" rel="noopener noreferrer" aria-label={`Get ${app.name} on Google Play Store`}>
                 Play Store
               </Link>
             )}
           </Button>
         )}
 
-        {!hasLandingPage && app.webUrl && (
+        {buttons.showWeb && (
           <Button
             size="sm"
             variant="outline"
-            asChild={!isComingSoon}
-            disabled={isComingSoon}
+            asChild={!buttons.webDisabled}
+            disabled={buttons.webDisabled}
           >
-            {isComingSoon ? (
+            {buttons.webDisabled ? (
               "Web"
             ) : (
-              <Link href={app.webUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={buttons.webUrl!} target="_blank" rel="noopener noreferrer" aria-label={`Open ${app.name} web app`}>
                 Web
               </Link>
             )}
@@ -97,6 +99,7 @@ export default function AppsPageClient() {
     <main className="pb-20">
       <div className="container">
         <SectionHeader
+          as="h1"
           title="All Apps"
           subtitle="Browse every application and product built under MS DevX ecosystem."
         />

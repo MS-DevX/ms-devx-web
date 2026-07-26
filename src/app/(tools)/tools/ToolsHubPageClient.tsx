@@ -17,7 +17,7 @@ const filterCategories = ["All", ...toolCategories];
 
 function getStatusBadgeClass(status: Tool["status"]): string {
   if (status === "live") {
-    return "border-teal/40 bg-teal/10 text-teal";
+    return "border-teal/40 bg-teal/10 text-teal-700 dark:text-teal-300";
   }
 
   return "border-border bg-muted/50 text-muted-foreground";
@@ -47,6 +47,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
   return (
     <>
       <SectionHeader
+        as="h1"
         title="MS DevX Tools Hub"
         subtitle="75+ free online tools and calculators — all private, all instant"
         className="mb-10"
@@ -85,7 +86,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
             className="rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1"
           >
             <div className="mb-2 flex flex-wrap items-center gap-2">
-              <h3 className="text-xl font-bold text-foreground">{tool.name}</h3>
+              <h2 className="text-xl font-bold text-foreground">{tool.name}</h2>
               <Badge
                 variant="outline"
                 className={getStatusBadgeClass(tool.status)}
@@ -96,7 +97,7 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
 
             <p className="mt-2 text-sm text-muted-foreground">{tool.description}</p>
 
-            <p className="mt-4 text-sm text-blue font-semibold">{tool.category}</p>
+            <p className="mt-4 text-sm text-blue dark:text-electric font-semibold">{tool.category}</p>
 
             <div className="mt-6">
               {tool.status === "live" ? (
@@ -105,7 +106,9 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
                   size="sm"
                   variant="gradient"
                 >
-                  <Link href={`/tools/${tool.slug}`}>Open Tool</Link>
+                  <Link href={`/tools/${tool.slug}`} aria-label={`Open ${tool.name}`}>
+                    Open Tool
+                  </Link>
                 </Button>
               ) : (
                 <Button disabled size="sm" variant="outline">

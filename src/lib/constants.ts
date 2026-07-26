@@ -39,11 +39,6 @@ export const socialLinks: SocialLink[] = [
     url: "https://x.com/MSDevX",
     icon: "twitter",
   },
-  {
-    name: "LinkedIn",
-    url: "#",
-    icon: "linkedin",
-  },
 ];
 
 export const toolCategories: ToolCategory[] = [

@@ -21,13 +21,13 @@
   --secondary: #F1F5F9;
   --secondary-foreground: #0F172A;
   --muted: #F8FAFC;
-  --muted-foreground: #64748B;
+  --muted-foreground: #334155;
   --accent: #DBEAFE;
-  --accent-foreground: #2563EB;
+  --accent-foreground: #1D4ED8;
   --destructive: #EF4444;
   --destructive-foreground: #ffffff;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
+  --border: #CBD5E1;
+  --input: #CBD5E1;
   --ring: #2563EB;
 }
 
@@ -39,7 +39,7 @@
   --card-foreground: #F8FAFC;
   --popover: #334155;
   --popover-foreground: #F8FAFC;
-  --primary: #3B82F6;
+  --primary: #2563EB;
   --primary-foreground: #ffffff;
   --secondary: #334155;
   --secondary-foreground: #F8FAFC;
@@ -51,13 +51,14 @@
   --destructive-foreground: #ffffff;
   --border: #475569;
   --input: #475569;
-  --ring: #3B82F6;
+  --ring: #2563EB;
 }
 
 @theme {
   --color-cyan: #06B6D4;
-  --color-teal: #14B8A6;
+  --color-teal: #0D9488;
   --color-blue: #2563EB;
+  --color-electric: #4A9EFF;
   --color-purple: #7C3AED;
   --color-slate: #0F172A;
 
@@ -72,14 +73,11 @@
 
   --radius-sm: 6px;
   --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 28px;
-
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 }
 
-/* Base styles */
+/* Global Reset & Typography */
 html {
   scroll-behavior: smooth;
 }
@@ -94,7 +92,7 @@ body {
 }
 
 .glass {
-  @apply backdrop-blur-md bg-background/60 border border-border;
+  @apply bg-background border border-border;
 }
 
 @utility text-gradient {

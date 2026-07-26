@@ -50,7 +50,7 @@ const howItWorksSteps: {
 
 function getStatusBadgeClass(status: ToolStatus): string {
   if (status === "live") {
-    return "border-teal/40 bg-teal/10 text-teal";
+    return "border-teal/40 bg-teal/10 text-teal-700 dark:text-teal-300";
   }
 
   return "border-border bg-muted/50 text-muted-foreground";
@@ -69,7 +69,7 @@ export default function ToolLayout({
           asChild
           variant="ghost"
           size="sm"
-          className="mb-6 -ml-2 text-muted-foreground hover:text-electric"
+          className="mb-6 -ml-2 text-muted-foreground hover:text-blue dark:hover:text-electric"
         >
           <Link href="/tools">
             <ArrowLeft className="size-4" />
@@ -99,7 +99,7 @@ export default function ToolLayout({
 
       <section
         aria-label="Tool workspace"
-        className="rounded-xl border border-border bg-background p-5 shadow-sm sm:p-8"
+        className="rounded-xl border border-border bg-card p-5 shadow-sm sm:p-8"
       >
         {children}
       </section>
@@ -119,15 +119,15 @@ export default function ToolLayout({
             return (
               <Card
                 key={item.step}
-                className="border-border bg-background py-5 transition hover:border-electric/30 hover:shadow-md"
+                className="border-border bg-card py-5 transition hover:border-blue/30 dark:hover:border-electric/30 hover:shadow-md"
               >
                 <CardHeader>
                   <div className="mb-2 flex items-center gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-electric/10 text-sm font-bold text-electric">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-blue/10 dark:bg-electric/10 text-sm font-bold text-blue-700 dark:text-electric">
                       {item.step}
                     </span>
-                    <div className="flex size-9 items-center justify-center rounded-lg bg-electric/10">
-                      <Icon className="size-4 text-electric" />
+                    <div className="flex size-9 items-center justify-center rounded-lg bg-blue/10 dark:bg-electric/10">
+                      <Icon className="size-4 text-blue-700 dark:text-electric" />
                     </div>
                   </div>
                   <CardTitle className="text-base text-foreground">
@@ -135,7 +135,7 @@ export default function ToolLayout({
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-sm leading-relaxed">
+                  <CardDescription className="text-sm leading-relaxed text-muted-foreground">
                     {item.description}
                   </CardDescription>
                 </CardContent>

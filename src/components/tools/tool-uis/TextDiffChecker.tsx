@@ -19,11 +19,11 @@ interface DiffResult {
 function getLineClass(type: DiffLine["type"]): string {
   switch (type) {
     case "removed":
-      return "bg-red-50 text-red-700";
+      return "bg-red-50 dark:bg-red-950/40 text-red-700 dark:text-red-400";
     case "added":
-      return "bg-green-50 text-green-700";
+      return "bg-green-50 dark:bg-green-950/40 text-green-700 dark:text-green-400";
     case "unchanged":
-      return "bg-gray-50 text-gray-700";
+      return "bg-muted/40 text-foreground";
     default:
       return "";
   }
@@ -136,13 +136,13 @@ export default function TextDiffChecker() {
 
       {diff && (
         <div className="flex flex-wrap gap-4 mb-6 justify-center">
-          <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
+          <span className="px-4 py-2 bg-green-100 dark:bg-green-950/50 text-green-700 dark:text-green-400 rounded-full text-sm font-semibold">
             +{diff.added} added
           </span>
-          <span className="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-semibold">
+          <span className="px-4 py-2 bg-red-100 dark:bg-red-950/50 text-red-700 dark:text-red-400 rounded-full text-sm font-semibold">
             -{diff.removed} removed
           </span>
-          <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+          <span className="px-4 py-2 bg-blue-100 dark:bg-blue-950/50 text-blue-700 dark:text-electric rounded-full text-sm font-semibold">
             {diff.changed} lines changed
           </span>
         </div>

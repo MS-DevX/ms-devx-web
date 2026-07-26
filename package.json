@@ -36,12 +36,16 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^16.2.12",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^26.1.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "axe-core": "^4.12.1",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.2.12",
+    "lighthouse": "^13.4.1",
+    "puppeteer-core": "^25.3.0",
     "tailwindcss": "^4",
     "typescript": "^6.0.3"
   }

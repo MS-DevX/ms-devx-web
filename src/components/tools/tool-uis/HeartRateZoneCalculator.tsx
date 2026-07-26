@@ -225,8 +225,9 @@ export default function HeartRateZoneCalculator() {
         </button>
       </div>
 
-      <ResultBox show={result !== null}>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      {result && (
+        <ResultBox show={true}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
           <div className="bg-[var(--bg-soft)] rounded-xl p-4 text-center border border-border">
             <div className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Max HR (220 - Age)</div>
             <div className="text-2xl font-bold text-foreground">{result?.maxHrStandard}</div>
@@ -287,6 +288,7 @@ export default function HeartRateZoneCalculator() {
           <span className="block mt-1">Tanaka max HR formula (208 - 0.7 x age): {result?.maxHrTanaka} bpm</span>
         </div>
       </ResultBox>
+      )}
 
       <section className="mt-10">
         <h2 className="text-lg font-bold text-foreground mb-4">Understanding Your Zones</h2>

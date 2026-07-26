@@ -2,7 +2,6 @@
 
 import { useState, useRef, useCallback } from "react";
 import Image from "next/image";
-import { PDFDocument } from "pdf-lib";
 
 interface ImageItem {
   id: string;
@@ -124,6 +123,7 @@ export default function ImageToPdf() {
     if (images.length === 0) return;
     setIsGenerating(true);
     try {
+      const { PDFDocument } = await import("pdf-lib");
       const pdfDoc = await PDFDocument.create();
       const [pw, ph] = PAGE_SIZES[pageSize];
       const isLandscape = orientation === "landscape";

@@ -23,7 +23,7 @@ const MAIN_SITE_PREFIXES = [
   "/blog",
   "/privacy",
   "/syncdue-privacy",
-  "/mc-privacy",
+  "/muslim-companion",
 ] as const;
 
 export function normalizeHost(host: string): string {

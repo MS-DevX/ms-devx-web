@@ -84,7 +84,8 @@ async function BlogTeaserContent({ className }: BlogTeaserProps) {
         <div className="mt-10 text-center">
           <Link
             href="/blog"
-            className="text-sm font-medium text-electric hover:underline"
+            aria-label="Read all engineering and AI insights on the MS DevX blog"
+            className="text-sm font-medium text-blue-700 dark:text-electric hover:underline"
           >
             View all posts →
           </Link>

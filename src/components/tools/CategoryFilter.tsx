@@ -23,7 +23,7 @@ export default function CategoryFilter({
           onClick={() => onChange(cat)}
           className={cn(
             "shrink-0 whitespace-nowrap text-sm transition",
-            active === cat && "bg-electric text-white hover:bg-electric/90"
+            active === cat && "bg-blue-600 text-white dark:bg-electric dark:text-slate-950 font-semibold hover:opacity-90"
           )}
         >
           {cat}

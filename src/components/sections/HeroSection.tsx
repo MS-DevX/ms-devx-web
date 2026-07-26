@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,58 +22,41 @@ export default function HeroSection({ className }: HeroSectionProps) {
       </div>
 
       <div className="container text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
-          {/* Logo mark */}
+        <div>
+          {/* Logo mark - LCP Element: priority loaded, zero JS delay */}
           <div className="flex justify-center mb-8">
             <Image 
               src="/logo-mark.svg" 
               alt="MS DevX Logo Mark" 
               width={120} 
-              height={120} 
+              height={120}
+              priority
+              fetchPriority="high"
             />
           </div>
-        </motion.div>
+        </div>
         
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight"
-        >
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
           Build <span className="text-gradient">Smarter</span>. Ship <span className="text-gradient">Faster</span>.
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-muted-foreground"
-        >
+        <p className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-muted-foreground">
           {siteConfig.description}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="mt-12 flex flex-col md:flex-row justify-center gap-4"
-        >
-          <Link href="/apps">
-            <Button size="lg" variant="gradient" className="text-lg px-8 py-4">
+        <div className="mt-12 flex flex-col md:flex-row justify-center gap-4">
+          <Button size="lg" asChild variant="gradient" className="text-lg px-8 py-4">
+            <Link href="/apps">
               Explore Apps
-            </Button>
-          </Link>
+            </Link>
+          </Button>
 
-          <Link href="/tools">
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4">
+          <Button size="lg" asChild variant="outline" className="text-lg px-8 py-4">
+            <Link href="/tools">
               Try Tools
-            </Button>
-          </Link>
-        </motion.div>
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -43,7 +43,7 @@ const relatedLinks = [
     description: "Browse every application built by MS DevX.",
   },
   {
-    href: "/mc-privacy",
+    href: "/muslim-companion/privacy",
     label: "Privacy Policy",
     description: "Muslim Companion is privacy-first and fully offline.",
   },
@@ -253,7 +253,7 @@ export default function MuslimCompanionPage() {
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link
-              href="/mc-privacy"
+              href="/muslim-companion/privacy"
               className="text-sm text-electric underline-offset-4 hover:underline"
             >
               Read our Privacy Policy

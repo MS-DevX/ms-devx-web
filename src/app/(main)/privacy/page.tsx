@@ -52,11 +52,6 @@ const sections = [
           Since we collect nothing, there is nothing to store, share, or
           sell.
         </p>
-        <p className="mt-3">
-          <strong>We do not collect, store, or share any personal data.</strong>{" "}
-          Our apps do not require an account, registration, or any personally
-          identifiable information.
-        </p>
       </>
     ),
   },
@@ -80,8 +75,9 @@ const sections = [
         <p>
           The free version of our apps uses{" "}
           <strong>Google AdMob</strong> to serve advertisements. AdMob
-          may collect device identifiers and usage data to deliver
-          interest-based ads. Data handling by AdMob is governed by{" "}
+          may collect device identifiers (e.g., Android Advertising ID) for
+          ad personalization and fraud prevention. Data handling by AdMob is
+          governed by{" "}
           <Link
             href="https://policies.google.com/privacy"
             className="text-electric hover:underline"
@@ -89,18 +85,6 @@ const sections = [
             Google&apos;s Privacy Policy
           </Link>
           .
-        </p>
-        <p className="mt-3">
-          Our free apps use <strong>Google AdMob</strong> to serve advertisements.
-          AdMob may collect device identifiers (e.g., Android Advertising ID) for
-          ad personalization and fraud prevention. See{" "}
-          <Link
-            href="https://policies.google.com/privacy"
-            className="text-electric hover:underline"
-          >
-            Google&apos;s Privacy Policy
-          </Link>{" "}
-          for details.
         </p>
       </>
     ),
@@ -114,13 +98,8 @@ const sections = [
           <strong>Google Play Store in-app purchases</strong> to unlock
           the full experience. All payment processing is handled entirely
           by Google Play Store. We <strong>never receive, process, or
-          store</strong> any payment or financial information.
-        </p>
-        <p className="mt-3">
-          In-app purchases are processed entirely by the{" "}
-          <strong>Google Play Store</strong> or <strong>Apple App Store</strong>.
-          We never receive your payment details. Purchase status (whether a
-          purchase has been made) is stored locally on your device.
+          store</strong> any payment or financial information. Purchase
+          status is stored locally on your device.
         </p>
       </>
     ),
@@ -175,10 +154,6 @@ const sections = [
           posted on this page with an updated effective date. We encourage you
           to review this policy periodically.
         </p>
-        <p className="mt-3">
-          This policy may be updated occasionally. Changes will be posted at
-          this URL.
-        </p>
       </>
     ),
   },
@@ -194,19 +169,6 @@ const sections = [
             className="text-electric hover:underline"
           >
             reach out to us
-          </Link>
-          .
-        </p>
-        <p className="mt-3">
-          <strong>MS DevX</strong>
-        </p>
-        <p className="mt-3">
-          For any feedback or inquiries, please{" "}
-          <Link
-            href="/contact"
-            className="text-electric hover:underline"
-          >
-            use our contact form
           </Link>
           .
         </p>

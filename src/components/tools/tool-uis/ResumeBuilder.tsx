@@ -60,7 +60,7 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
     <div className={cn("grid gap-6 lg:grid-cols-2", className)}>
       <div className="space-y-4">
         <div className="space-y-2">
-          <label htmlFor="resume-name" className="text-sm font-medium">
+          <label htmlFor="resume-name" className="text-sm font-medium text-foreground">
             Full name
           </label>
           <Input
@@ -72,7 +72,7 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="resume-skills" className="text-sm font-medium">
+          <label htmlFor="resume-skills" className="text-sm font-medium text-foreground">
             Skills (comma-separated)
           </label>
           <Input
@@ -84,7 +84,7 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="resume-experience" className="text-sm font-medium">
+          <label htmlFor="resume-experience" className="text-sm font-medium text-foreground">
             Experience
           </label>
           <Textarea
@@ -99,7 +99,7 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
         <Button
           onClick={handleGenerate}
           disabled={loading}
-          className="w-full bg-electric text-white hover:bg-electric/90 sm:w-auto"
+          className="w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto"
         >
           {loading ? (
             <>
@@ -116,13 +116,13 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
       </div>
 
       <div className="space-y-4">
-        <div className="rounded-lg border border-border bg-muted/30 p-4">
-          <p className="mb-3 text-xs font-medium uppercase tracking-wide text-electric">
+        <div className="rounded-lg border border-border bg-card p-4">
+          <p className="mb-3 text-xs font-medium uppercase tracking-wide text-blue-700 dark:text-electric">
             Live preview
           </p>
-          <h3 className="text-lg font-bold text-foreground">
+          <p className="text-lg font-bold text-foreground">
             {livePreview.name}
-          </h3>
+          </p>
           <div className="mt-3 flex flex-wrap gap-2">
             {livePreview.skills.map((skill) => (
               <span
@@ -140,7 +140,7 @@ export default function ResumeBuilder({ className }: ToolUiProps) {
 
         {showOutput && generated && (
           <div className="animate-in fade-in rounded-lg border border-teal/30 bg-teal/5 p-4 duration-300">
-            <p className="mb-2 text-xs font-medium uppercase tracking-wide text-teal">
+            <p className="mb-2 text-xs font-medium uppercase tracking-wide text-teal-700 dark:text-teal">
               AI-generated resume
             </p>
             <pre className="whitespace-pre-wrap font-sans text-sm text-foreground">

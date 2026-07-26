@@ -64,7 +64,7 @@ const staticRoutes: MetadataRoute.Sitemap = [
     priority: 0.5,
   },
   {
-    url: `${siteConfig.siteUrl}/mc-privacy`,
+    url: `${siteConfig.siteUrl}/muslim-companion/privacy`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.5,
