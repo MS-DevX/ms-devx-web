@@ -85,5 +85,18 @@
     "badge": "Free",
     "status": "coming-soon",
     "featured": false
+  },
+  {
+    "id": "8",
+    "name": "RCM Academy",
+    "description": "Master Revenue Cycle Management — interactive lessons, quizzes, simulations, and career paths for healthcare billing and coding professionals.",
+    "category": "Education",
+    "iconUrl": "/apps/rcm-academy.png",
+    "playStoreUrl": null,
+    "webUrl": null,
+    "badge": "New",
+    "status": "coming-soon",
+    "featured": true,
+    "landingPage": "/rcm-academy"
   }
 ]

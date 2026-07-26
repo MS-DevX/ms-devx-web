@@ -6,7 +6,7 @@ const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 
 const closedTestingSchema = z.object({
   email: z.string().email("Please enter a valid email address."),
-  app: z.enum(["muslim-companion", "unit-converter"]),
+  app: z.enum(["muslim-companion", "unit-converter", "rcm-academy"]),
 });
 
 type ClosedTestingApiResponse =
