@@ -46,7 +46,6 @@ export default function StatsBar({ className }: StatsBarProps) {
 
   const apps = useCounter(12, isInView);
   const tools = useCounter(10, isInView);
-  const clients = useCounter(25, isInView);
   const countries = useCounter(6, isInView);
 
   return (
@@ -57,7 +56,7 @@ export default function StatsBar({ className }: StatsBarProps) {
         className
       )}
     >
-      <div className="container grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+      <div className="container grid grid-cols-3 gap-6 text-center md:grid-cols-3">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -80,15 +79,6 @@ export default function StatsBar({ className }: StatsBarProps) {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <p className="text-3xl font-bold text-electric">{clients}+</p>
-          <p className="text-sm text-muted-foreground">Clients Served</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="text-3xl font-bold text-electric">{countries}+</p>
           <p className="text-sm text-muted-foreground">Countries</p>
