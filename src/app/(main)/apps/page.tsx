@@ -18,19 +18,19 @@ const breadcrumbs = [
 
 const relatedLinks = [
   {
-    href: "/tools",
-    label: "MS DevX Tools",
-    description: "Free web utilities for developers and creators.",
+    href: "/apps/unit-converter",
+    label: "Unit Converter",
+    description: "Convert units instantly — 300+ units, 53 categories, fully offline.",
   },
   {
-    href: "/services",
-    label: "Services",
-    description: "Custom AI and SaaS development offerings.",
+    href: "/apps/muslim-companion",
+    label: "Muslim Companion",
+    description: "Offline Islamic companion — Quran reader, prayer times, Qibla compass.",
   },
   {
-    href: "/blog",
-    label: "Blog",
-    description: "Product updates and engineering articles.",
+    href: "/rcm-academy",
+    label: "RCM Academy",
+    description: "Master Revenue Cycle Management — interactive lessons and career paths.",
   },
 ];
 

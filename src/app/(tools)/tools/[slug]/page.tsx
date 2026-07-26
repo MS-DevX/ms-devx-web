@@ -11,7 +11,6 @@ import ToolLayout from "@/components/tools/ToolLayout";
 import ToolRenderer from "@/components/tools/ToolRenderer";
 
 import toolsData from "@/content/data/tools.json";
-import { siteConfig } from "@/lib/constants";
 import {
   buildPageMetadata,
   combineSchemas,
@@ -77,7 +76,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
     .filter((item) => item.slug !== slug && item.category === tool.category)
     .slice(0, 3)
     .map((item) => ({
-      href: toolsPublicPath(item.slug),
+      href: `/tools/${item.slug}`,
       label: item.name,
       description: item.description,
     }));
@@ -87,14 +86,19 @@ export default async function ToolPage({ params }: ToolPageProps) {
       ? relatedTools
       : [
           {
-            href: "/",
+            href: "/tools",
             label: "All Tools",
             description: "Browse the full MS DevX tools hub.",
           },
           {
-            href: siteConfig.url,
-            label: "MS DevX Home",
-            description: "Services, apps, and blog.",
+            href: "/apps/unit-converter",
+            label: "Unit Converter",
+            description: "Convert units instantly — 300+ units, 53 categories.",
+          },
+          {
+            href: "/apps/muslim-companion",
+            label: "Muslim Companion",
+            description: "Offline Islamic companion — Quran, prayer times, Qibla.",
           },
         ];
 

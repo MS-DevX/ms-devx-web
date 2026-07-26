@@ -47,7 +47,7 @@ export default function HeroSection({ className }: HeroSectionProps) {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight"
         >
-          Build <span className="text-gradient">smarter apps</span>. Ship <span className="text-gradient">faster</span>.
+          Build <span className="text-gradient">Smarter</span>. Ship <span className="text-gradient">Faster</span>.
         </motion.h1>
 
         <motion.p

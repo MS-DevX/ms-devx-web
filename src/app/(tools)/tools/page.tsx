@@ -4,7 +4,6 @@ import JsonLd from "@/components/seo/JsonLd";
 import PageBreadcrumbs from "@/components/seo/PageBreadcrumbs";
 import RelatedLinks from "@/components/seo/RelatedLinks";
 import toolsData from "@/content/data/tools.json";
-import { siteConfig } from "@/lib/constants";
 import {
   absoluteUrl,
   buildPageMetadata,
@@ -24,19 +23,19 @@ const breadcrumbs = [{ name: "Tools Hub", path: "/" }];
 
 const relatedLinks = [
   {
-    href: siteConfig.url,
-    label: "MS DevX Home",
-    description: "AI studio, services, and apps.",
+    href: "/apps/unit-converter",
+    label: "Unit Converter",
+    description: "Convert units instantly — 300+ units, 53 categories, fully offline.",
   },
   {
-    href: `${siteConfig.url}/blog`,
-    label: "Blog",
-    description: "Engineering notes and product updates.",
+    href: "/apps/muslim-companion",
+    label: "Muslim Companion",
+    description: "Offline Islamic companion — Quran reader, prayer times, Qibla compass.",
   },
   {
-    href: `${siteConfig.url}/services`,
-    label: "Services",
-    description: "Custom AI and SaaS development.",
+    href: "/rcm-academy",
+    label: "RCM Academy",
+    description: "Master Revenue Cycle Management — interactive lessons and career paths.",
   },
 ];
 

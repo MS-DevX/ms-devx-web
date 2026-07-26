@@ -8,14 +8,6 @@ import CategoryFilter from "@/components/tools/CategoryFilter";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useDebounce } from "@/hooks/useDebounce";
 import { toolCategories } from "@/lib/constants";
@@ -86,48 +78,42 @@ export default function ToolsHubPageClient({ tools }: ToolsHubPageClientProps) {
         />
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {filteredTools.map((tool) => (
-          <Card
+          <div
             key={tool.id}
-            className="flex flex-col border-border bg-background py-5 transition duration-200 hover:-translate-y-1 hover:border-electric/40 hover:shadow-lg"
+            className="rounded-2xl border border-border bg-card p-6 transition-all hover:shadow-xl hover:-translate-y-1"
           >
-            <CardHeader>
-              <div className="mb-2 flex flex-wrap items-center gap-2">
-                <Badge variant="outline">{tool.category}</Badge>
-                <Badge
-                  variant="outline"
-                  className={getStatusBadgeClass(tool.status)}
-                >
-                  {tool.status === "live" ? "Live" : "Coming Soon"}
-                </Badge>
-              </div>
-              <CardTitle className="text-lg text-foreground">
-                {tool.name}
-              </CardTitle>
-            </CardHeader>
+            <div className="mb-2 flex flex-wrap items-center gap-2">
+              <h3 className="text-xl font-bold text-foreground">{tool.name}</h3>
+              <Badge
+                variant="outline"
+                className={getStatusBadgeClass(tool.status)}
+              >
+                {tool.status === "live" ? "Live" : "Coming Soon"}
+              </Badge>
+            </div>
 
-            <CardContent className="flex-1">
-              <CardDescription className="text-sm leading-relaxed">
-                {tool.description}
-              </CardDescription>
-            </CardContent>
+            <p className="mt-2 text-sm text-muted-foreground">{tool.description}</p>
 
-            <CardFooter>
+            <p className="mt-4 text-sm text-blue font-semibold">{tool.category}</p>
+
+            <div className="mt-6">
               {tool.status === "live" ? (
                 <Button
                   asChild
-                  className="w-full bg-electric text-white hover:bg-electric/90"
+                  size="sm"
+                  className="btn-primary"
                 >
                   <Link href={`/tools/${tool.slug}`}>Open Tool</Link>
                 </Button>
               ) : (
-                <Button disabled variant="outline" className="w-full">
+                <Button disabled size="sm" variant="outline">
                   Coming Soon
                 </Button>
               )}
-            </CardFooter>
-          </Card>
+            </div>
+          </div>
         ))}
       </div>
 

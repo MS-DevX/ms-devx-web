@@ -32,18 +32,18 @@ export default function NavBar({ className }: NavBarProps) {
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image 
-            src="/logo-horizontal-transparent.svg" 
-            alt="MS DevX" 
-            width={180} 
-            height={48} 
-            className="dark:hidden" 
-          />
-          <Image 
-            src="/logo-horizontal-dark-background.svg" 
-            alt="MS DevX" 
-            width={180} 
-            height={48} 
-            className="hidden dark:block" 
+              src="/logo-horizontal-transparent.svg" 
+              alt="MS DevX" 
+              width={220} 
+              height={58} 
+              className="dark:hidden" 
+            />
+            <Image 
+              src="/logo-horizontal-dark-background.svg" 
+              alt="MS DevX" 
+              width={220} 
+              height={58} 
+              className="hidden dark:block"
           />
         </Link>
 
