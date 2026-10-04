@@ -8,8 +8,10 @@ export const siteConfig = {
   url: "https://msdevx.com",
   siteUrl: "https://msdevx.com",
   toolsUrl: "https://msdevx.com/tools",
-  contactEmail: "marthsystems@gmail.com",
+  contactEmail: "support@marthsystems.com",
   author: "Shahzad Marth",
+  /** Legal publisher name used on Play Store privacy policies. */
+  publisher: "Marth Systems",
   colors: {
     cyan: "#06B6D4",
     blue: "#2563EB",
@@ -62,8 +64,10 @@ export const appCategories = [
   "Productivity",
   "Islamic",
   "Student",
+  "Education",
   "PDF",
   "AI",
+  "Games",
   "Utility",
 ];
 

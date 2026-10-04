@@ -11,6 +11,7 @@ import {
   createBreadcrumbSchema,
   pageKeywords,
 } from "@/lib/seo";
+import { siteConfig } from "@/lib/constants";
 
 const breadcrumbs = [
   { name: "Home", path: "/" },
@@ -32,7 +33,8 @@ const relatedLinks = [
   },
 ];
 
-const supportEmail = "msdevxsupport@gmail.com";
+// Single source of truth for the support inbox (see siteConfig).
+const supportEmail = siteConfig.contactEmail;
 
 const sections = [
   {

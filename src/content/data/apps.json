@@ -98,5 +98,18 @@
     "badge": "Free",
     "status": "coming-soon",
     "featured": false
+  },
+  {
+    "id": "9",
+    "name": "Word Link Daily",
+    "description": "Connect the letters in any direction to uncover every hidden word. One fresh puzzle a day — plays offline, tracks streaks and stats, no account needed.",
+    "category": "Games",
+    "iconUrl": "/apps/placeholder.svg",
+    "playStoreUrl": null,
+    "webUrl": null,
+    "badge": "Free",
+    "status": "live",
+    "featured": true,
+    "landingPage": "/apps/word-link-daily"
   }
 ]

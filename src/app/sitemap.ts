@@ -70,6 +70,18 @@ const staticRoutes: MetadataRoute.Sitemap = [
     priority: 0.5,
   },
   {
+    url: `${siteConfig.siteUrl}/apps/word-link-daily`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.85,
+  },
+  {
+    url: `${siteConfig.siteUrl}/wld-privacy`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.5,
+  },
+  {
     url: `${siteConfig.siteUrl}/tools`,
     lastModified: new Date(),
     changeFrequency: "weekly",
