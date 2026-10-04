@@ -18,7 +18,7 @@
     "description": "Offline Islamic companion — Quran reader, prayer times, Qibla compass, Hadith explorer, and Tasbeeh counter.",
     "category": "Islamic",
     "iconUrl": "/apps/muslim-companion.png",
-    "playStoreUrl": null,
+    "playStoreUrl": "https://play.google.com/store/apps/details?id=com.msdevx.muslimcompanion&pcampaignid=web_share",
     "webUrl": null,
     "badge": "Free",
     "status": "coming-soon",
@@ -108,7 +108,7 @@
     "playStoreUrl": null,
     "webUrl": null,
     "badge": "Free",
-    "status": "live",
+    "status": "coming-soon",
     "featured": true,
     "landingPage": "/apps/word-link-daily"
   }
