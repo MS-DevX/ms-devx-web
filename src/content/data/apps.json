@@ -21,10 +21,10 @@
     "playStoreUrl": "https://play.google.com/store/apps/details?id=com.msdevx.muslimcompanion&pcampaignid=web_share",
     "webUrl": null,
     "badge": "Free",
-    "status": "coming-soon",
+    "status": "live",
     "featured": true,
     "landingPage": "/apps/muslim-companion",
-    "closedTesting": true
+    "closedTesting": false
   },
   {
     "id": "3",
