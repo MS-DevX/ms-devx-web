@@ -10,12 +10,12 @@ import {
   Star,
 } from "lucide-react";
 
-import MuslimCompanionClient from "@/app/(main)/apps/muslim-companion/MuslimCompanionClient";
 import JsonLd from "@/components/seo/JsonLd";
 import PageBreadcrumbs from "@/components/seo/PageBreadcrumbs";
 import RelatedLinks from "@/components/seo/RelatedLinks";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -136,7 +136,7 @@ export default function MuslimCompanionPage() {
 
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <Badge className="mb-4 bg-gradient-primary text-white border-0">
-            Closed Testing
+            Free
           </Badge>
           <h1 className="text-4xl font-bold text-foreground sm:text-5xl">
             Muslim Companion
@@ -146,10 +146,27 @@ export default function MuslimCompanionPage() {
             times, Qibla compass, Hadith explorer, and Tasbeeh counter. Fully
             offline. Zero data collection.
           </p>
-        </div>
-
-        <div className="mx-auto mb-20 max-w-xl">
-          <MuslimCompanionClient />
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Button
+              size="lg"
+              className="bg-electric text-white hover:bg-electric/90"
+              asChild
+            >
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.msdevx.muslimcompanion&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Muslim Companion on Google Play"
+              >
+                Get on Google Play
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/muslim-companion/privacy">
+                Read Privacy Policy
+              </Link>
+            </Button>
+          </div>
         </div>
 
         <section className="mb-20">
@@ -245,16 +262,30 @@ export default function MuslimCompanionPage() {
 
         <section className="rounded-2xl border border-border bg-electric/5 px-6 py-12 text-center sm:px-10">
           <h2 className="text-2xl font-bold text-foreground">
-            Ready to join closed testing?
+            Get Muslim Companion today
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
-            Sign up above to get early access to Muslim Companion. We&apos;ll
-            send you a Google Play testing link when the next round opens.
+            Download it from Google Play — fully offline, privacy-first, and
+            free.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Button
+              size="lg"
+              className="bg-electric text-white hover:bg-electric/90"
+              asChild
+            >
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.msdevx.muslimcompanion&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Muslim Companion on Google Play"
+              >
+                Get on Google Play
+              </Link>
+            </Button>
             <Link
               href="/muslim-companion/privacy"
-              className="text-sm text-electric underline-offset-4 hover:underline"
+              className="inline-flex items-center px-4 text-sm text-electric underline-offset-4 hover:underline"
             >
               Read our Privacy Policy
             </Link>
