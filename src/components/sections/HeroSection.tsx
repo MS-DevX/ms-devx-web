@@ -36,8 +36,8 @@ export default function HeroSection({ className }: HeroSectionProps) {
           </div>
         </div>
         
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
-          Build <span className="text-gradient">Smarter</span>. Ship <span className="text-gradient">Faster</span>.
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+          Build <span className="text-gradient">Smarter</span>. Ship <span className="text-gradient inline-block">Faster</span>.
         </h1>
 
         <p className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-muted-foreground">
